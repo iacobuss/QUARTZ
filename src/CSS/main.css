@@ -400,7 +400,8 @@ body {
 
 /* ===== SOBRE NÓS ===== */
 .sobre-nos {
-    min-height: calc(100vh - 144px); /* desconta header + bottom nav */
+    min-height: 100vh;   /* fallback */
+    min-height: 100svh;  /* mobile moderno (iPhone incluso) */
     display: flex;
     flex-direction: column;
     background-color: var(--bege-claro);
@@ -495,4 +496,14 @@ body {
 .sobre-slider .slick-next:before {
     font-size: 1rem;
     color: white;
+}
+
+/* ===== CORREÇÃO GLOBAL MOBILE ===== */
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
 }
