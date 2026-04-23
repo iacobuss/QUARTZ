@@ -95,7 +95,7 @@ header {
 /* ===== HERO ===== */
 .hero {
     position: relative;
-    height: 50vh;
+    height: calc(100svh - 64px);
     display: flex;
     align-items: flex-end;
     overflow: hidden;
