@@ -1,27 +1,27 @@
-/* ===== VARIÁVEIS QUART'Z – TEMA ESCURO ===== */
+/* ===== VARIÁVEIS QUART'Z – CREME QUENTE & PRETO SUAVE ===== */
 :root {
     /* Backgrounds */
-    --bg-principal:     #121212;
-    --bg-card:          #1E1C1A;
-    --bg-card-hover:    #252220;
-    --bg-header:        #0F0F0F;
-
+    --bg-principal:     #FAF6F0;
+    --bg-card:          #EDE4D8;
+    --bg-card-hover:    #E4D9CA;
+    --bg-header:        #FAF6F0;
+ 
     /* Dourado */
-    --dourado:          #C9A46C;
-    --dourado-escuro:   #A8844F;
-    --dourado-claro:    #E0C39A;
-    --dourado-muted:    #8A6A3A;
-
+    --dourado:          #C4943E;
+    --dourado-escuro:   #A37830;
+    --dourado-claro:    #D9B06A;
+    --dourado-muted:    #C4A872;
+ 
     /* Texto */
-    --texto-principal:  #F0EAE0;
+    --texto-principal:  #242018;
     --texto-secundario: #9A8878;
-    --texto-muted:      #5A4E44;
-
+    --texto-muted:      #C0B0A0;
+ 
     /* Bordas */
-    --borda:            #2A2420;
-    --borda-dourada:    #3A2E20;
-
+    --borda:            #DDD4C8;
+    --borda-dourada:    #C8A96A;
+ 
     /* Utilitários */
     --branco:           #FFFFFF;
-    --preto:            #0A0A0A;
+    --preto:            #0E0C08;
 }
