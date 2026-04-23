@@ -49,13 +49,10 @@ header {
     height: 100%;
 }
 
-.logo h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    color: var(--dourado);
-    text-transform: uppercase;
+.logo img {
+    height: 32px;
+    align-items: center;
+    margin: 2rem auto 1.5rem;
 }
 
 .btn-menu {
@@ -166,8 +163,8 @@ header {
     align-items: center;
     justify-content: center;
     padding: 14px 20px;
-    background-color: var(--dourado);
-    color: var(--preto);
+    background-color: #111111;
+    color: #FFFFFF;
     font-family: 'Jost', sans-serif;
     font-size: 0.72rem;
     font-weight: 500;
@@ -184,13 +181,13 @@ header {
     justify-content: center;
     padding: 14px 20px;
     background-color: transparent;
-    color: var(--texto-principal);
+    color: #FFFFFF;
     font-family: 'Jost', sans-serif;
     font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    border: 1px solid rgba(240, 234, 224, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     flex: 1;
     min-width: 130px;
 }
@@ -454,13 +451,15 @@ header {
 }
 
 .menu-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    color: var(--dourado);
     text-align: center;
-    margin-bottom: 1rem;
+    padding: 0.5rem 0 1rem;
+}
+
+.menu-logo img {
+    height: 64px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .menu-divider {
@@ -502,7 +501,7 @@ header {
     flex: 1;
     padding: 11px 0;
     background-color: var(--dourado);
-    color: var(--preto);
+    color: var(--branco);
     font-family: 'Jost', sans-serif;
     font-size: 0.7rem;
     font-weight: 500;
