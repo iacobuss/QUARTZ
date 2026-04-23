@@ -3,146 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quartz</title>
-    <!-- Importação CSS-->
+    <title>Quart'z – Joias com Pedras Naturais</title>
+    <link rel="stylesheet" href="./src/CSS/variables.css" />
     <link rel="stylesheet" href="./src/CSS/main.css" />
-    <!--Importação FA-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- CSS do Slick -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header>
         <nav class="navbar">
-            <button class="btn btn-menu">
+            <button class="btn btn-menu" aria-label="Abrir menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
             <div class="logo">
-                <h1>QUARTZ</h1>
+                <h1>QUART'Z</h1>
             </div>
 
-            <button class="btn btn-carrinho">
-                <img src="./src/imagens/carrinho-logo.png" />
-            </button>
+            <div class="navbar-actions">
+                <button class="btn btn-icon" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="btn btn-icon" aria-label="Carrinho">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!-- BARRA INFERIOR -->
-    <nav class="bottom-nav">
-        <a href="#" class="bottom-item active">
-            <i class="fa-solid fa-house"></i>
-            <span>Início</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-solid fa-grip"></i>
-            <span>Categorias</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-regular fa-heart"></i>
-            <span>Favoritos</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Carrinho</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-regular fa-user"></i>
-            <span>Conta</span>
-        </a>
-    </nav>
-
-    <!-- CARROSSEL DA HOME-->
-    <section class="carrossel-home">
-
-    <div class="slide slide-1">
-        <div class="slide-inner">
-            <div class="slide-content">
-                <h2>Beleza que conecta com sua essência</h2>
-                <p>Joias e pedras naturais selecionadas especialmente para você.</p>
-                <a href="#" class="btn-hero">Conheça a coleção</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide slide-2">
-        <div class="slide-inner">
-            <div class="slide-content">
-                <h2>Energia e intenção em cada peça</h2>
-                <p>Descubra o poder das pedras naturais.</p>
-                <a href="#" class="btn-hero">Ver coleção</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide slide-3">
-        <div class="slide-inner">
-            <div class="slide-content">
-                <h2>Feito com amor e propósito</h2>
-                <p>Peças únicas para momentos especiais.</p>
-                <a href="#" class="btn-hero">Explorar</a>
-            </div>
-        </div>
-    </div>
-
-    </section>
-
-    <!-- ÍCONES DE CATEGORIA -->
-    <section class="categorias-icones">
-        <div class="icone-item">
-            <div class="icone-circulo">
-                <i class="fa-regular fa-gem"></i>
-            </div>
-            <span>Pedras Naturais</span>
-        </div>
-        <div class="icone-item">
-            <div class="icone-circulo">
-                <i class="fa-solid fa-ring"></i>
-            </div>
-            <span>Joias Exclusivas</span>
-        </div>
-        <div class="icone-item">
-            <div class="icone-circulo">
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <span>Energia e Propósito</span>
-        </div>
-        <div class="icone-item">
-            <div class="icone-circulo">
-                <i class="fa-solid fa-hand-holding-heart"></i>
-            </div>
-            <span>Feito com Intenção</span>
-        </div>
-    </section>
-
-    <!-- CATEGORIAS PRINCIPAIS -->
-    <section class="categorias-principais">
-        <div class="secao-header">
-            <h2>Categorias principais</h2>
-            <a href="#">Ver todas</a>
-        </div>
-        <div class="categorias-lista">
-            <div class="categoria-item">
-                <div class="categoria-circulo"></div>
-                <span>Semi-Joias</span>
-            </div>
-            <div class="categoria-item">
-                <div class="categoria-circulo"></div>
-                <span>Ouro</span>
-            </div>
-            <div class="categoria-item">
-                <div class="categoria-circulo"></div>
-                <span>Prata</span>
-            </div>
-            <div class="categoria-item">
-                <div class="categoria-circulo"></div>
-                <span>Pedras</span>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-label">JOIAS COM PEDRAS NATURAIS</p>
+            <h2 class="hero-title">Beleza que carrega<br>energia da terra</h2>
+            <p class="hero-desc">Anéis, colares, pulseiras e brincos com pedras naturais selecionadas e design exclusivo.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">VER COLEÇÕES</a>
+                <a href="#" class="btn-outline">NOSSA HISTÓRIA</a>
             </div>
         </div>
     </section>
 
-    <!-- PROMOÇÕES -->
+    <!-- ===== STATS ===== -->
+    <section class="stats">
+        <div class="stat-item">
+            <span class="stat-value">6+</span>
+            <span class="stat-label">anos de loja</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">pedras naturais</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <i class="fa-solid fa-truck stat-icon"></i>
+            <span class="stat-label">frete seguro<br>grátis</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <div class="stat-circle">30</div>
+            <span class="stat-label">troca 30 dias</span>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORIAS GRID ===== -->
+    <section class="categorias-grid">
+        <a href="#" class="categoria-card">
+            <div class="categoria-icon">
+                <!-- Ícone colar -->
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10 Q20 10 15 20 Q10 30 15 40 Q20 50 30 52 Q40 50 45 40 Q50 30 45 20 Q40 10 30 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="30" cy="52" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M26 52 Q28 56 30 58 Q32 56 34 52" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+            </div>
+            <span class="categoria-nome">Joias finas</span>
+            <span class="categoria-sub">Ouro 18k e pedras naturais</span>
+        </a>
+
+        <a href="#" class="categoria-card">
+            <div class="categoria-icon">
+                <!-- Ícone brincos -->
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="38" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M22 16 L18 28 L14 32 L18 38 L22 44 L26 38 L30 32 L26 28 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M38 16 L34 28 L30 32 L34 38 L38 44 L42 38 L46 32 L42 28 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+            </div>
+            <span class="categoria-nome">Semi joias de luxo</span>
+            <span class="categoria-sub">Banho de ouro e pedras</span>
+        </a>
+
+        <a href="#" class="categoria-card">
+            <div class="categoria-icon">
+                <!-- Ícone anel masculino -->
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="14" y="20" width="32" height="20" rx="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <rect x="20" y="26" width="20" height="8" rx="4" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M14 30 Q10 30 10 30" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M46 30 Q50 30 50 30" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <span class="categoria-nome">Coleção masculina</span>
+            <span class="categoria-sub">Pedras naturais e metais nobres</span>
+        </a>
+
+        <a href="#" class="categoria-card">
+            <div class="categoria-icon">
+                <!-- Ícone diamante -->
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 52 L8 24 L16 10 H44 L52 24 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M8 24 H52" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M16 10 L22 24 L30 52" stroke="currentColor" stroke-width="1"/>
+                    <path d="M44 10 L38 24 L30 52" stroke="currentColor" stroke-width="1"/>
+                    <path d="M22 24 H38" stroke="currentColor" stroke-width="1"/>
+                </svg>
+            </div>
+            <span class="categoria-nome">Diamante lab.</span>
+            <span class="categoria-sub">Sustentável e certificado</span>
+        </a>
+    </section>
+
+    <!-- ===== PROMOÇÕES ===== -->
     <section class="secao-produtos">
         <div class="secao-header">
             <h2>Promoções</h2>
@@ -167,7 +157,7 @@
         </div>
     </section>
 
-    <!-- NOVIDADES -->
+    <!-- ===== NOVIDADES ===== -->
     <section class="secao-produtos">
         <div class="secao-header">
             <h2>Novidades</h2>
@@ -176,92 +166,132 @@
         <div class="produtos-lista">
             <div class="produto-card">
                 <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 1</span>
-                <span class="produto-preco">R$ 99,90</span>
+                <span class="produto-nome">Produto 4</span>
+                <span class="produto-preco">R$ 259,90</span>
             </div>
             <div class="produto-card">
                 <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 2</span>
-                <span class="produto-preco">R$ 149,90</span>
+                <span class="produto-nome">Produto 5</span>
+                <span class="produto-preco">R$ 319,90</span>
             </div>
             <div class="produto-card">
                 <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 3</span>
-                <span class="produto-preco">R$ 199,90</span>
+                <span class="produto-nome">Produto 6</span>
+                <span class="produto-preco">R$ 189,90</span>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE NÓS -->
-    <section class="sobre-nos">
-        <h2>Nossa História</h2>
-        <p class="sobre-subtitulo">Conheça a essência por trás de cada peça</p>
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <p>© 2025 Quart'z – Todos os direitos reservados</p>
+    </footer>
 
-        <div class="sobre-slider">
-            <div class="sobre-item">
-                <div class="sobre-imagem"></div>
-                <div class="sobre-texto">
-                    <h3>Como tudo começou</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam tempore eius maxime quos magni dolorem ullam animi non, itaque eum, facilis nisi eligendi doloremque pariatur, eveniet nesciunt minus quam deleniti.</p>
-                </div>
-            </div>
-            <div class="sobre-item">
-                <div class="sobre-imagem"></div>
-                <div class="sobre-texto">
-                    <h3>Nossa missão</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam eos nulla, est totam id earum tempora ipsam incidunt quas laboriosam laborum. Voluptatum hic illo nemo non molestiae, quam quaerat!</p>
-                </div>
-            </div>
-            <div class="sobre-item">
-                <div class="sobre-imagem"></div>
-                <div class="sobre-texto">
-                    <h3>Nossos valores</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab facere, deleniti eligendi rem et unde sit, maiores molestiae modi excepturi, velit ea reiciendis vel nobis! Distinctio debitis molestiae maiores!</p>
-                </div>
-            </div>
-            <div class="sobre-item">
-                <div class="sobre-imagem"></div>
-                <div class="sobre-texto">
-                    <h3>Para você</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, adipisci maxime quo commodi deserunt possimus praesentium ut eveniet consectetur, voluptatibus eius sunt voluptate hic maiores, nesciunt odio officia magni blanditiis!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ===== BARRA INFERIOR ===== -->
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Início</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Buscar</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-regular fa-heart"></i>
+            <span>Favoritos</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Carrinho</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Conta</span>
+        </a>
+    </nav>
 
-    <!-- MENU LATERAL (FORA DO HEADER) -->
+    <!-- ===== MENU LATERAL ===== -->
     <div id="nav-links" class="menu">
+        <div class="menu-header">
+            <button class="btn-close" aria-label="Fechar menu">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <h2 class="menu-logo">QUART'Z</h2>
+            <hr class="menu-divider">
+        </div>
 
-        <button class="btn-close">
-            <i class="fa-solid fa-times"></i>
-        </button>
+        <div class="menu-auth">
+            <p>Olá, faça login ou cadastre-se</p>
+            <div class="menu-auth-buttons">
+                <button class="menu-btn-entrar">ENTRAR</button>
+                <button class="menu-btn-cadastrar">CADASTRAR</button>
+            </div>
+        </div>
 
-        <ul class="menu-principal">
-            <li><a href="#">Semi-Joias</a></li>
-            <li><a href="#">Joias em Ouro</a></li>
-            <li><a href="#">Joias em Prata</a></li>
-            <li><a href="#">Simbolismo e Energia</a></li>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Promoções</a></li>
-        </ul>
+        <div class="menu-section">
+            <span class="menu-section-label">COLEÇÕES</span>
+            <ul>
+                <li><a href="#">Joias finas <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Semi joias de luxo <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Coleção masculina <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Diamante de laboratório <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Lançamentos <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
 
-        <hr>
+        <hr class="menu-divider">
 
-        <ul class="menu-secundario">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre a Loja</a></li>
-            <li><a href="#">Contato / Suporte</a></li>
-        </ul>
+        <div class="menu-section">
+            <span class="menu-section-label">DESCUBRA</span>
+            <ul>
+                <li><a href="#">Energia das pedras <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Guia de tamanhos <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Como cuidar das joias <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
 
+        <hr class="menu-divider">
+
+        <div class="menu-section menu-atendimento">
+            <span class="menu-section-label">ATENDIMENTO</span>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Falar no WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                        contato@sualoja.com.br
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Foz do Iguaçu, PR
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="menu-divider">
+
+        <div class="menu-footer">
+            <div class="menu-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="menu-copyright">© 2025 Aurora Gemas</p>
+        </div>
     </div>
 
     <div class="overlay"></div>
-    
-
-    <!-- jQuery (necessário pro Slick) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Slick JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="./src/js/script.js"></script>
 </body>

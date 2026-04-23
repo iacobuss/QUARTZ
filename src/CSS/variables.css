@@ -1,23 +1,27 @@
-/* Cores */
+/* ===== VARIÁVEIS QUART'Z – TEMA ESCURO ===== */
 :root {
-    /* Paleta Principal */
-    --bege-claro: #F5F1EC;
-    --bege-medio: #E8DFD6;
-    --bege-escuro: #D6C6B8;
-    --marrom-claro: #C2A78D;
-    --marrom-medio: #A1846A;
-    --marrom-escuro: #6E5542;
-    --marrom-profundo: #3E2F25;
+    /* Backgrounds */
+    --bg-principal:     #121212;
+    --bg-card:          #1E1C1A;
+    --bg-card-hover:    #252220;
+    --bg-header:        #0F0F0F;
 
-    /* Cores de Destque*/
-    --dourado: #C9A46C;
-    --dourado-escuro: #A8844F;
-    --dourado-claro: #E0C39A;
+    /* Dourado */
+    --dourado:          #C9A46C;
+    --dourado-escuro:   #A8844F;
+    --dourado-claro:    #E0C39A;
+    --dourado-muted:    #8A6A3A;
 
-    /* Cores Neutras*/
-    --branco: #FFFFFF;
-    --cinza-claro: #E5E5E5;
-    --cinza-medio: #9A9A9A;
-    --cinza-escuro: #4A4A4A;
-    --preto: #1A1A1A;
+    /* Texto */
+    --texto-principal:  #F0EAE0;
+    --texto-secundario: #9A8878;
+    --texto-muted:      #5A4E44;
+
+    /* Bordas */
+    --borda:            #2A2420;
+    --borda-dourada:    #3A2E20;
+
+    /* Utilitários */
+    --branco:           #FFFFFF;
+    --preto:            #0A0A0A;
 }

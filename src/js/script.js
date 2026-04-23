@@ -1,12 +1,13 @@
-const btnMenu = document.querySelector('.btn-menu');
+// ===== MENU LATERAL =====
+const btnMenu  = document.querySelector('.btn-menu');
 const btnClose = document.querySelector('.btn-close');
-const menu = document.getElementById('nav-links');
-const overlay = document.querySelector('.overlay');
+const menu     = document.getElementById('nav-links');
+const overlay  = document.querySelector('.overlay');
 
 function openMenu() {
     menu.classList.add('show');
     overlay.classList.add('show');
-    document.body.style.overflow = 'hidden'; // prevent background scroll
+    document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
@@ -17,23 +18,13 @@ function closeMenu() {
 
 btnMenu.addEventListener('click', openMenu);
 btnClose.addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu); 
+overlay.addEventListener('click', closeMenu);
 
-$(document).ready(function() {
-    $('.carrossel-home').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 4000,
-    });
-
-    // ← adiciona isso
-    $('.sobre-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: false,
-        speed: 400,
+// ===== BOTTOM NAV – ACTIVE STATE =====
+const bottomItems = document.querySelectorAll('.bottom-item');
+bottomItems.forEach(item => {
+    item.addEventListener('click', () => {
+        bottomItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
     });
 });
