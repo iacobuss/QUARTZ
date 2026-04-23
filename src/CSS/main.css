@@ -41,6 +41,15 @@ header {
 
 .btn-menu {
     font-size: 1.5rem;
+    background: none;
+    border: none;
+    -webkit-appearance: none; /* remove estilo iOS */
+}
+
+.btn-menu,
+.btn-menu:visited,
+.btn-menu:active {
+    color: var(--preto);
 }
 
 .btn-carrinho img {
@@ -83,6 +92,7 @@ header {
     transition: left 0.3s ease;
     z-index: 1050;
     overflow: hidden;
+    justify-content: space-between;
 }
 
 .menu.show {
@@ -114,8 +124,7 @@ header {
 }
 
 .menu-principal {
-    margin-top: 80px;
-    margin-bottom: 140px; /* espaço antes do HR */
+    margin-top: 70px;
 }
 
 
@@ -129,6 +138,7 @@ header {
 
 .menu-secundario {
     margin-top: auto;
+    padding-bottom: 20px;
 }
 
 .menu a {
@@ -146,7 +156,7 @@ header {
 
 .menu hr {
     margin-top: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 12px;
 }
 
 /* ===== CARROSSEL DA HOME ===== */
