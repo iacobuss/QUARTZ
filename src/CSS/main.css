@@ -73,16 +73,16 @@ header {
     left: -100%;
     width: 75%;
     height: 100vh;
+    height: 100svh;
     background-color: var(--bege-claro);
-    padding: 2rem 1.5rem;
+    padding: 0 1.2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     border-radius: 0 16px 16px 0;
     box-shadow: 2px 0 15px rgba(0,0,0,0.1);
     transition: left 0.3s ease;
     z-index: 1050;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .menu.show {
@@ -103,21 +103,32 @@ header {
     list-style: none;
 }
 
-.menu-principal {
-    margin-top: 2rem;
+.menu-principal li {
+    margin-bottom: 0.9rem;
 }
 
-.menu-principal li {
-    margin-bottom: 1.2rem;
+.menu-principal a {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.menu-principal {
+    margin-top: 80px;
+    margin-bottom: 140px; /* espaço antes do HR */
+}
+
+
+.menu-secundario li {
+    margin-bottom: 0.9rem;
+}
+
+.menu-secundario a {
+    font-size: 0.9rem;
 }
 
 .menu-secundario {
     margin-top: auto;
-    padding-top: 1rem;
-}
-
-.menu-secundario li {
-    margin-bottom: 1rem;
 }
 
 .menu a {
@@ -134,9 +145,8 @@ header {
 }
 
 .menu hr {
-    border: none;
-    border-top: 1px solid var(--preto);
-    margin-top: 90%;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
 }
 
 /* ===== CARROSSEL DA HOME ===== */
@@ -147,19 +157,21 @@ header {
 .carrossel-home .slick-slider,
 .carrossel-home .slick-list,
 .carrossel-home .slick-track {
-    height: 500px;
+    height: 60vh;
+    max-height: 420px;
 }
 
 .carrossel-home .slick-slide {
-    height: 500px;
+    height: 420px;
 }
 
 .carrossel-home .slick-slide > div {
-    height: 500px;
+    height: 420px;
 }
 
 .slide {
-    height: 500px;
+    height: 60vh;
+    max-height: 420px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -180,27 +192,29 @@ header {
 }
 
 .slide-inner {
-    display: table-cell;   /* ← célula da tabela */
-    vertical-align: bottom; /* ← alinha no fundo */
-    height: 500px;
-    padding: 0 1.5rem 3rem 1.5rem;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 60vh;
+    max-height: 420px;
+    padding: 0 1.5rem 56px 1.5rem;
 }
 
 .slide-content {
+    max-width: 90%;
     position: relative;
     color: white;
     z-index: 1;
 }
 
 .slide-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 0.8rem;
 }
 
 .slide-content p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin-bottom: 1.2rem;
     opacity: 0.9;
 }
