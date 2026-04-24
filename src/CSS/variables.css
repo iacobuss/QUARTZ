@@ -1,25 +1,25 @@
 /* ===== VARIÁVEIS QUART'Z – PRETO & BRANCO ===== */
 :root {
     /* Backgrounds */
-    --bg-principal:     #FFFFFF;
-    --bg-card:          #F5F5F5;
-    --bg-card-hover:    #EBEBEB;
+    --bg-principal:     #F4F4F4;
+    --bg-card:          #EBEBEB;
+    --bg-card-hover:    #E0E0E0;
     --bg-header:        #FFFFFF;
 
     /* Destaque */
-    --dourado:          #111111;
-    --dourado-escuro:   #000000;
-    --dourado-claro:    #444444;
-    --dourado-muted:    #888888;
+    --destaque:         #111111;
+    --destaque-escuro:  #000000;
+    --destaque-claro:   #444444;
+    --destaque-muted:   #888888;
 
     /* Texto */
     --texto-principal:  #111111;
-    --texto-secundario: #666666;
-    --texto-muted:      #BBBBBB;
+    --texto-secundario: #555555;
+    --texto-muted:      #999999;
 
     /* Bordas */
-    --borda:            #E0E0E0;
-    --borda-dourada:    #CCCCCC;
+    --borda:            #DADADA;
+    --borda-suave:      #CCCCCC;
 
     /* Utilitários */
     --branco:           #FFFFFF;
