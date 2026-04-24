@@ -129,7 +129,7 @@ header {
 .hero-label {
     font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: var(--dourado);
+    color: var(--texto-muted);
     font-weight: 400;
     margin-bottom: 0.8rem;
     text-transform: uppercase;
@@ -140,7 +140,7 @@ header {
     font-size: 2.1rem;
     font-weight: 400;
     line-height: 1.15;
-    color: var(--texto-principal);
+    color: var(--branco);
     margin-bottom: 0.8rem;
 }
 
@@ -459,7 +459,7 @@ header {
     height: 64px;
     width: auto;
     display: block;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 .menu-divider {
