@@ -1,60 +1,66 @@
+// ===================================================
+// joias.js — autossuficiente, não depende do script.js
+// ===================================================
+
 // ===== MENU LATERAL =====
 const btnMenu  = document.querySelector('.btn-menu');
 const btnClose = document.querySelector('.btn-close');
-const menu     = document.getElementById('nav-links');
+const menuEl   = document.getElementById('nav-links');
 const overlay  = document.querySelector('.overlay');
 
 function openMenu() {
-    menu.classList.add('show');
+    menuEl.classList.add('show');
     overlay.classList.add('show');
     document.body.style.overflow = 'hidden';
 }
 function closeMenu() {
-    menu.classList.remove('show');
+    menuEl.classList.remove('show');
     overlay.classList.remove('show');
     document.body.style.overflow = '';
 }
-if (btnMenu)  btnMenu.addEventListener('click', openMenu);
+if (btnMenu && menuEl && overlay) {
+    btnMenu.addEventListener('click', openMenu);
+    overlay.addEventListener('click', closeMenu);
+}
 if (btnClose) btnClose.addEventListener('click', closeMenu);
-if (overlay)  overlay.addEventListener('click', closeMenu);
 
 // ===== HEADER =====
-const header    = document.getElementById('joias-header');
+const headerEl  = document.getElementById('joias-header');
 const logoImg   = document.getElementById('logo-img');
 const heroEl    = document.querySelector('.joias-hero');
-const logoWhite = './src/imagens/logo-branca.png';
+const logoWhite = './src/imagens/logo-branco.png';
 const logoBlack = './src/imagens/logo-preta.png';
 let lastScrollY  = window.scrollY;
 let headerOculto = false;
 
-if (header) {
-    header.style.transition = 'transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease';
+if (headerEl) {
+    headerEl.style.transition = 'transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease';
 }
 
 function updateHeader() {
-    if (!header || !logoImg) return;
+    if (!headerEl || !logoImg) return;
     const scrollY    = window.scrollY;
     const heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
     const scrollando = scrollY > lastScrollY;
 
     if (heroBottom <= 70) {
-        header.classList.remove('header-transparente');
-        header.classList.add('header-solido');
+        headerEl.classList.remove('header-transparente');
+        headerEl.classList.add('header-solido');
         logoImg.src = logoBlack;
     } else {
-        header.classList.add('header-transparente');
-        header.classList.remove('header-solido');
+        headerEl.classList.add('header-transparente');
+        headerEl.classList.remove('header-solido');
         logoImg.src = logoWhite;
     }
 
     if (heroBottom <= 70) {
         if (scrollando && scrollY > 120) {
-            if (!headerOculto) { header.style.transform = 'translateY(-100%)'; headerOculto = true; }
+            if (!headerOculto) { headerEl.style.transform = 'translateY(-100%)'; headerOculto = true; }
         } else {
-            if (headerOculto) { header.style.transform = 'translateY(0)'; headerOculto = false; }
+            if (headerOculto) { headerEl.style.transform = 'translateY(0)'; headerOculto = false; }
         }
     } else {
-        header.style.transform = 'translateY(0)';
+        headerEl.style.transform = 'translateY(0)';
         headerOculto = false;
     }
     lastScrollY = scrollY;
@@ -72,7 +78,7 @@ function avancarHero() {
 }
 if (totalSlides > 1) setInterval(avancarHero, 4000);
 
-// ===== FILTRO DE ABAS =====
+// ===== FILTRO DE ABAS (ouro/prata/todos) =====
 const abas     = document.querySelectorAll('.btn-aba');
 const produtos = document.querySelectorAll('.produto-card');
 
@@ -95,14 +101,16 @@ abas.forEach(aba => {
 const btnOrdenar      = document.getElementById('btn-ordenar');
 const dropdownOrdenar = document.getElementById('ordenar-dropdown');
 const opcoesOrdenar   = document.querySelectorAll('.ordenar-opcao');
+const TEXTO_PADRAO    = 'ORDENAR POR ';
 
 if (btnOrdenar && dropdownOrdenar) {
-    btnOrdenar.addEventListener('click', (e) => {
+    btnOrdenar.addEventListener('click', e => {
         e.stopPropagation();
         dropdownOrdenar.classList.toggle('aberto');
         btnOrdenar.classList.toggle('aberto');
     });
 
+    // fecha ao clicar fora
     document.addEventListener('click', () => {
         dropdownOrdenar.classList.remove('aberto');
         btnOrdenar.classList.remove('aberto');
@@ -110,28 +118,78 @@ if (btnOrdenar && dropdownOrdenar) {
 }
 
 opcoesOrdenar.forEach(opcao => {
-    opcao.addEventListener('click', (e) => {
+    opcao.addEventListener('click', e => {
         e.stopPropagation();
-        opcoesOrdenar.forEach(o => o.classList.remove('ativo'));
-        opcao.classList.add('ativo');
 
-        if (btnOrdenar) btnOrdenar.childNodes[0].textContent = opcao.textContent + ' ';
-        if (dropdownOrdenar) { dropdownOrdenar.classList.remove('aberto'); btnOrdenar.classList.remove('aberto'); }
-
-        const ordem = opcao.dataset.ordem;
-        const grid  = document.querySelector('.produtos-grid');
+        const ordem      = opcao.dataset.ordem;
+        const jaAtivo    = opcao.classList.contains('ativo');
+        const grid       = document.querySelector('.produtos-grid');
         if (!grid) return;
 
+        if (dropdownOrdenar) dropdownOrdenar.classList.remove('aberto');
+        if (btnOrdenar)      btnOrdenar.classList.remove('aberto');
+
+        // --- TOGGLE: clicou na opção já ativa → limpa ---
+        if (jaAtivo) {
+            opcao.classList.remove('ativo');
+            if (btnOrdenar) btnOrdenar.childNodes[0].textContent = TEXTO_PADRAO;
+
+            // restaura ordem original
+            const cards = Array.from(grid.querySelectorAll('.produto-card'));
+            cards.sort((a, b) =>
+                parseInt(a.dataset.ordemOrig) - parseInt(b.dataset.ordemOrig)
+            );
+            cards.forEach(card => grid.appendChild(card));
+            aplicarFiltroAtual();
+            return;
+        }
+
+        // marca nova opção ativa
+        opcoesOrdenar.forEach(o => o.classList.remove('ativo'));
+        opcao.classList.add('ativo');
+        if (btnOrdenar) btnOrdenar.childNodes[0].textContent = opcao.textContent + ' ';
+
         const cards = Array.from(grid.querySelectorAll('.produto-card'));
-        if (ordem === 'maior-preco') cards.sort((a, b) => getPreco(b) - getPreco(a));
-        else if (ordem === 'menor-preco') cards.sort((a, b) => getPreco(a) - getPreco(b));
-        cards.forEach(card => grid.appendChild(card));
+
+        if (ordem === 'maior-preco') {
+            cards.sort((a, b) => getPreco(b) - getPreco(a));
+            cards.forEach(card => grid.appendChild(card));
+
+        } else if (ordem === 'menor-preco') {
+            cards.sort((a, b) => getPreco(a) - getPreco(b));
+            cards.forEach(card => grid.appendChild(card));
+
+        } else {
+            // filtra por categoria respeitando metal ativo
+            const filtroMetalAtivo = document.querySelector('.btn-aba.active')?.dataset.filtro || 'todos';
+            cards.forEach(card => {
+                const categoriaOk = card.dataset.categoria === ordem;
+                const metalOk     = filtroMetalAtivo === 'todos' || card.dataset.metal === filtroMetalAtivo;
+                if (categoriaOk && metalOk) {
+                    card.classList.remove('oculto');
+                } else {
+                    card.classList.add('oculto');
+                }
+            });
+        }
     });
 });
 
+// helper: reaplica o filtro de metal ativo sem mexer na ordem
+function aplicarFiltroAtual() {
+    const filtroAtivo = document.querySelector('.btn-aba.active')?.dataset.filtro || 'todos';
+    produtos.forEach(card => {
+        if (filtroAtivo === 'todos' || card.dataset.metal === filtroAtivo) {
+            card.classList.remove('oculto');
+        } else {
+            card.classList.add('oculto');
+        }
+    });
+}
+
 function getPreco(card) {
     const txt = card.querySelector('.produto-preco')?.textContent || '0';
-    return parseFloat(txt.replace('R$', '').replace('.', '').replace(',', '.').trim()) || 0;
+    return parseFloat(txt.replace('R$', '').replace(/\./g, '').replace(',', '.').trim()) || 0;
 }
 
 // ===== ACCORDION DO RODAPÉ =====
@@ -144,9 +202,9 @@ accordionBtns.forEach(btn => {
             b.classList.remove('aberto');
             if (b.nextElementSibling) b.nextElementSibling.classList.remove('aberto');
         });
-        if (!estaAberto) {
+        if (!estaAberto && content) {
             btn.classList.add('aberto');
-            if (content) content.classList.add('aberto');
+            content.classList.add('aberto');
         }
     });
 });

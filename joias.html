@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quart'z – Joias com Pedras Naturais</title>
     <link rel="stylesheet" href="./src/CSS/variables.css" />
+    <link rel="stylesheet" href="./src/CSS/global.css" />
     <link rel="stylesheet" href="./src/CSS/joias.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="logo">
-                <img id="logo-img" src="./src/imagens/logo-branca.png" alt="Logo Quart'z">
+                <img id="logo-img" src="./src/imagens/logo-preta.png" alt="Logo Quart'z">
             </div>
             <div class="navbar-actions">
                 <button class="btn-icon" aria-label="Buscar">
@@ -40,15 +41,15 @@
         </div>
         <div class="joias-hero-track" id="joias-hero-track">
             <div class="joias-hero-slide">
-                <img src="./src/imagens/banner-2-joias.png" alt="">
+                <img src="./src/imagens/banner-1-joias-mobile.png" alt="">
                 <div class="joias-hero-overlay"></div>
             </div>
             <div class="joias-hero-slide">
-                <img src="./src/imagens/banner-joias-2.png" alt="">
+                <img src="./src/imagens/banner-2-joias-mobile.png" alt="">
                 <div class="joias-hero-overlay"></div>
             </div>
             <div class="joias-hero-slide">
-                <img src="./src/imagens/banner-joias-3.png" alt="">
+                <img src="./src/imagens/banner-3-joias-mobile.png" alt="">
                 <div class="joias-hero-overlay"></div>
             </div>
         </div>
@@ -84,7 +85,7 @@
     <!-- ===== GRID DE PRODUTOS ===== -->
     <main class="produtos-grid">
 
-        <div class="produto-card" data-metal="ouro">
+        <div class="produto-card" data-metal="ouro" data-categoria="pingentes" data-ordem-orig="1">
             <div class="produto-imagem">
                 <span class="produto-badge">Novo</span>
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
@@ -96,7 +97,7 @@
             <span class="produto-parcelamento">3x R$ 116,33</span>
         </div>
 
-        <div class="produto-card" data-metal="prata">
+        <div class="produto-card" data-metal="prata" data-categoria="aneis" data-ordem-orig="2">
             <div class="produto-imagem">
                 <span class="produto-badge">Novo</span>
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
@@ -108,7 +109,7 @@
             <span class="produto-parcelamento">3x R$ 96,33</span>
         </div>
 
-        <div class="produto-card" data-metal="ouro">
+        <div class="produto-card" data-metal="ouro" data-categoria="pulseiras" data-ordem-orig="3">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
                 <img src="./src/imagens/rivieira.png" alt="Pulseira Riviera Esmeralda">
@@ -119,7 +120,7 @@
             <span class="produto-parcelamento">3x R$ 163,00</span>
         </div>
 
-        <div class="produto-card" data-metal="prata">
+        <div class="produto-card" data-metal="prata" data-categoria="pingentes" data-ordem-orig="4">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
                 <img src="./src/imagens/colar-lua.png" alt="Colar Pedra da Lua">
@@ -130,7 +131,7 @@
             <span class="produto-parcelamento">3x R$ 73,00</span>
         </div>
 
-        <div class="produto-card" data-metal="prata">
+        <div class="produto-card" data-metal="prata" data-categoria="aneis" data-ordem-orig="5">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
                 <img src="./src/imagens/anel-prata-malaquita.png" alt="Anel de Malaquita">
@@ -141,7 +142,7 @@
             <span class="produto-parcelamento">3x R$ 106,33</span>
         </div>
 
-        <div class="produto-card" data-metal="prata">
+        <div class="produto-card" data-metal="prata" data-categoria="aneis" data-ordem-orig="6">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
                 <img src="./src/imagens/anel-verde-prata.png" alt="Anel de Esmeralda">
@@ -152,7 +153,7 @@
             <span class="produto-parcelamento">3x R$ 86,33</span>
         </div>
 
-        <div class="produto-card" data-metal="ouro">
+        <div class="produto-card" data-metal="ouro" data-categoria="pingentes" data-ordem-orig="7">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
                 <img src="./src/imagens/colar-esmeralda.png" alt="Colar de Esmeralda">
@@ -237,12 +238,8 @@
     <!-- ===== MENU LATERAL ===== -->
     <div id="nav-links" class="menu">
         <div class="menu-header">
-            <button class="btn-close" aria-label="Fechar menu">
-                <i class="fa-solid fa-times"></i>
-            </button>
-            <div class="menu-logo">
-                <img src="./src/imagens/logo-preta.png" alt="Logo Quart'z">
-            </div>
+            <button class="btn-close" aria-label="Fechar menu"><i class="fa-solid fa-times"></i></button>
+            <div class="menu-logo"><img src="./src/imagens/logo-preta.png" alt="Logo Quart'z"></div>
             <hr class="menu-divider">
         </div>
         <div class="menu-auth">
@@ -252,19 +249,17 @@
                 <button class="menu-btn-cadastrar">CADASTRAR</button>
             </div>
         </div>
-        <div class="menu-section">
-            <span class="menu-section-label">COLEÇÕES</span>
+        <div class="menu-section menu-section-principal">
             <ul>
-                <li><a href="#">Joias finas <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Semi joias de luxo <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Coleção masculina <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Diamante de laboratório <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Lançamentos <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="joias.html">Joias Finas <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Semi-Joias de Luxo <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Diamantes Lab. <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Coleções <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Novidades <i class="fa-solid fa-chevron-right"></i></a></li>
                 <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </div>
-        <hr class="menu-divider">
-        <div class="menu-section">
+        <div class="menu-section-descubra">
             <span class="menu-section-label">DESCUBRA</span>
             <ul>
                 <li><a href="#">Energia das pedras <i class="fa-solid fa-chevron-right"></i></a></li>
@@ -272,28 +267,17 @@
                 <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </div>
-        <hr class="menu-divider">
-        <div class="menu-section menu-atendimento">
-            <span class="menu-section-label">ATENDIMENTO</span>
-            <ul>
-                <li><a href="#"><i class="fa-brands fa-whatsapp"></i>Falar no WhatsApp</a></li>
-                <li><a href="#"><i class="fa-regular fa-envelope"></i>contato@quartz.com.br</a></li>
-                <li><a href="#"><i class="fa-solid fa-location-dot"></i>Foz do Iguaçu, PR</a></li>
-            </ul>
-        </div>
-        <hr class="menu-divider">
         <div class="menu-footer">
             <div class="menu-social">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                 <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
             </div>
-            <p class="menu-copyright">© 2026 Quart'z Joias com Pedras naturais</p>
+            <p class="menu-copyright">© 2026 Quart'z</p>
         </div>
     </div>
 
     <div class="overlay"></div>
-    <script src="./src/js/script.js"></script>
     <script src="./src/js/joias.js"></script>
 </body>
 </html>

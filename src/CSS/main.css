@@ -1321,7 +1321,7 @@ header.header-solido #logo-img {
 
 /* ===== HERO — diminui para ~55vh ===== */
 .hero {
-    height: 64svh !important;
+    height: 100svh;
 }
 
 /* ===== HEADER — transparente só enquanto hero está visível ===== */
@@ -1354,8 +1354,8 @@ header.header-solido #logo-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 1.2rem;
-    font-size: 1.25rem;
+    padding: 14px 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: var(--texto-principal);
     letter-spacing: 0.01em;

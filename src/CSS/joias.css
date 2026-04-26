@@ -76,20 +76,18 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 .joias-hero {
     position: relative;
     width: 100%;
-    height: 42vw;
-    max-height: 260px;
-    min-height: 160px;
+    height: 56vw;
+    max-height: 320px;
+    min-height: 180px;
     overflow: hidden;
     user-select: none;
 }
 
-/* apenas o conteúdo interno não é interativo */
 .joias-hero-track,
 .joias-hero-slide,
 .joias-hero-slide img,
 .joias-hero-overlay { pointer-events: none; }
 
-/* título na parte inferior — sem linha decorativa */
 .joias-hero-titulo {
     position: absolute;
     bottom: 0; left: 0; right: 0;
@@ -104,30 +102,37 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 
 .joias-hero-titulo h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.3rem, 4.5vw, 2.2rem);
+    font-size: clamp(1.1rem, 4vw, 2rem);
     font-weight: 400;
     color: var(--branco);
     letter-spacing: 0.18em;
     text-align: center;
-    white-space: nowrap; /* força uma linha só */
+    white-space: nowrap;
 }
 
+/* track ocupa exatamente 100% da section — sem vazamento */
 .joias-hero-track {
     display: flex;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     transition: transform 0.9s ease;
+    will-change: transform;
 }
 
 .joias-hero-slide {
     position: relative;
-    min-width: 100%; height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
 .joias-hero-slide img {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
     display: block;
 }
 
@@ -202,19 +207,20 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 .btn-ordenar i { font-size: 0.6rem; transition: transform 0.25s ease; }
 .btn-ordenar.aberto i { transform: rotate(180deg); }
 
-/* dropdown de opções */
+/* dropdown — fixo à esquerda do wrapper, não sai da tela */
 .ordenar-dropdown {
     display: none;
     position: absolute;
     top: calc(100% + 6px);
-    right: 0;
+    left: 0;
     background-color: var(--branco);
     border: 1px solid var(--borda);
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     overflow: hidden;
-    z-index: 100;
-    min-width: 160px;
+    z-index: 200;
+    min-width: 180px;
+    max-width: calc(100vw - 32px);
 }
 
 .ordenar-dropdown.aberto { display: block; }
@@ -238,6 +244,13 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 .ordenar-opcao:last-child { border-bottom: none; }
 .ordenar-opcao:hover { background-color: var(--bg-card); }
 .ordenar-opcao.ativo { font-weight: 500; color: var(--preto); }
+
+/* opção ativa com checkmark visual */
+.ordenar-opcao.ativo {
+    font-weight: 500;
+    color: var(--preto);
+    background-color: var(--bg-card);
+}
 
 /* ===== GRID DE PRODUTOS ===== */
 .produtos-grid {
@@ -338,45 +351,3 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 .rodape-copyright { font-size: 0.7rem; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; text-align: center; }
 .rodape-cnpj { font-size: 0.65rem; color: rgba(255,255,255,0.25); text-align: center; }
 
-/* ===== MENU LATERAL ===== */
-.menu {
-    position: fixed; top: 0; left: -100%;
-    width: 78%; max-width: 320px;
-    height: 100vh; height: 100svh;
-    background-color: var(--branco);
-    border-right: 1px solid var(--borda);
-    display: flex; flex-direction: column;
-    transition: left 0.3s ease; z-index: 1050;
-    overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none;
-}
-.menu::-webkit-scrollbar { display: none; }
-.menu.show { left: 0; }
-
-.menu-header { padding: 0.8rem 1.2rem 0; flex-shrink: 0; }
-.btn-close { font-size: 1.1rem; color: var(--texto-secundario); padding: 4px; display: block; margin-left: auto; margin-bottom: 0.5rem; }
-.menu-logo { text-align: center; padding: 0.3rem 0 0.8rem; }
-.menu-logo img { height: 22px; width: auto; display: block; margin: auto; }
-.menu-divider { border: none; border-top: 1px solid var(--borda); margin: 0; }
-
-.menu-auth { padding: 0.8rem 1.2rem; background-color: var(--bg-card); flex-shrink: 0; }
-.menu-auth p { font-size: 0.75rem; color: var(--texto-secundario); margin-bottom: 0.6rem; }
-.menu-auth-buttons { display: flex; gap: 0.5rem; }
-.menu-btn-entrar { flex: 1; padding: 9px 0; border: 1px solid var(--destaque); color: var(--destaque); font-family: 'Jost', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; background: transparent; cursor: pointer; }
-.menu-btn-cadastrar { flex: 1; padding: 9px 0; background-color: var(--preto); color: var(--branco); font-family: 'Jost', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; border: none; cursor: pointer; }
-
-.menu-section { padding: 0.8rem 1.2rem; background-color: var(--branco); flex-shrink: 0; }
-.menu-section-label { font-size: 0.58rem; letter-spacing: 0.2em; color: var(--texto-muted); font-weight: 500; display: block; margin-bottom: 0.6rem; text-transform: uppercase; }
-.menu-section ul { list-style: none; }
-.menu-section ul li { border-bottom: 1px solid var(--borda); }
-.menu-section ul li:last-child { border-bottom: none; }
-.menu-section ul li a { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; font-size: 0.95rem; font-weight: 300; color: var(--texto-principal); transition: color 0.2s; }
-.menu-section ul li a:hover { color: var(--destaque-escuro); }
-.menu-section ul li a i.fa-chevron-right { font-size: 0.6rem; color: var(--texto-muted); }
-.menu-atendimento ul li a { gap: 0.75rem; justify-content: flex-start; font-size: 0.88rem; }
-.menu-atendimento ul li a i { font-size: 1rem; color: var(--destaque-claro); width: 20px; text-align: center; flex-shrink: 0; }
-
-.menu-footer { margin-top: auto; padding: 1rem 1.2rem; text-align: center; background-color: var(--bg-card); border-top: 1px solid var(--borda); flex-shrink: 0; }
-.menu-social { display: flex; justify-content: center; gap: 1.4rem; margin-bottom: 0.6rem; }
-.menu-social a { font-size: 1.1rem; color: var(--texto-secundario); transition: color 0.2s; }
-.menu-social a:hover { color: var(--preto); }
-.menu-copyright { font-size: 0.65rem; color: var(--texto-muted); letter-spacing: 0.05em; }

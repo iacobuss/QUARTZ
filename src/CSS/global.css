@@ -1,0 +1,302 @@
+/* ===================================================
+   global.css — estilos compartilhados por todas as páginas
+   Importar APÓS variables.css e ANTES do CSS específico da página
+   =================================================== */
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 64px;
+    padding: 0 1.2rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: transform 0.35s ease, background-color 0.35s ease,
+                border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+header.header-transparente {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+header.header-transparente .btn-menu,
+header.header-transparente .btn-icon { color: var(--branco); }
+
+header.header-solido {
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+header.header-solido .btn-menu,
+header.header-solido .btn-icon { color: var(--texto-principal); }
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 28px;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-menu {
+    font-size: 1.3rem;
+    padding: 8px;
+    -webkit-appearance: none;
+    transition: color 0.3s;
+    color: inherit;
+}
+
+.navbar-actions { display: flex; gap: 0.2rem; }
+
+.btn-icon {
+    font-size: 1.1rem;
+    padding: 8px;
+    transition: color 0.3s;
+    color: inherit;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--preto);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+}
+.overlay.show { opacity: 0.5; pointer-events: all; }
+
+/* ===== MENU LATERAL ===== */
+.menu {
+    position: fixed;
+    top: 0; left: -100%;
+    width: 78%;
+    max-width: 320px;
+    height: 100vh;
+    height: 100svh;
+    background-color: var(--branco);
+    border-right: 1px solid var(--borda);
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.menu::-webkit-scrollbar { display: none; }
+.menu.show { left: 0; }
+
+.menu-header {
+    padding: 0.8rem 1.2rem 0;
+    flex-shrink: 0;
+}
+
+.btn-close {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    padding: 4px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+}
+
+.menu-logo {
+    text-align: center;
+    padding: 0.5rem 0 1rem;
+}
+
+.menu-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+.menu-divider {
+    border: none;
+    border-top: 1px solid var(--borda);
+    margin: 0;
+}
+
+/* auth */
+.menu-auth {
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(237,233,227,0.45);
+    flex-shrink: 0;
+}
+
+.menu-auth p {
+    font-size: 0.78rem;
+    color: var(--texto-secundario);
+    margin-bottom: 0.6rem;
+}
+
+.menu-auth-buttons { display: flex; gap: 0.5rem; }
+
+.menu-btn-entrar {
+    flex: 1;
+    padding: 10px 0;
+    border: 1px solid var(--destaque);
+    color: var(--destaque);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-btn-cadastrar {
+    flex: 1;
+    padding: 10px 0;
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+}
+
+/* seção principal — itens grandes */
+.menu-section-principal {
+    padding: 0;
+    background-color: var(--branco);
+    flex-shrink: 0;
+}
+
+.menu-section-principal ul { list-style: none; }
+
+.menu-section-principal ul li {
+    border-bottom: 1px solid var(--borda);
+}
+
+.menu-section-principal ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--texto-principal);
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+}
+
+.menu-section-principal ul li a:hover { color: var(--destaque-escuro); }
+
+.menu-section-principal ul li a i.fa-chevron-right {
+    font-size: 0.6rem;
+    color: var(--texto-muted);
+}
+
+/* seção descubra — empurrada para o rodapé */
+.menu-section-descubra {
+    margin-top: auto;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--branco);
+    border-top: 1px solid var(--borda);
+    flex-shrink: 0;
+}
+
+.menu-section-descubra .menu-section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    color: var(--texto-secundario);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.menu-section-descubra ul { list-style: none; }
+
+.menu-section-descubra ul li {
+    border-bottom: 1px solid var(--borda);
+}
+
+.menu-section-descubra ul li:last-child { border-bottom: none; }
+
+.menu-section-descubra ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--texto-principal);
+    transition: color 0.2s;
+}
+
+.menu-section-descubra ul li a:hover { color: var(--preto); }
+
+.menu-section-descubra ul li a i.fa-chevron-right {
+    font-size: 0.6rem;
+    color: var(--texto-muted);
+}
+
+/* rodapé do menu */
+.menu-footer {
+    padding: 1rem 1.2rem;
+    text-align: center;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--borda);
+    flex-shrink: 0;
+}
+
+.menu-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.menu-social a {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    transition: color 0.2s;
+}
+
+.menu-social a:hover { color: var(--preto); }
+
+.menu-copyright {
+    font-size: 0.65rem;
+    color: var(--texto-muted);
+    letter-spacing: 0.05em;
+}

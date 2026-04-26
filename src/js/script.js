@@ -50,7 +50,7 @@ accordionBtns.forEach(btn => {
 const header    = document.getElementById('site-header');
 const logoImg   = document.getElementById('logo-img');
 const heroEl    = document.querySelector('.hero');
-const logoWhite = './src/imagens/logo.branco.png';
+const logoWhite = './src/imagens/logo-branco.png';
 const logoBlack = './src/imagens/logo-preta.png';
 
 let lastScrollY  = window.scrollY;
