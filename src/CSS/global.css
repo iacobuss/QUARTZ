@@ -137,11 +137,11 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 
 .menu-logo {
     text-align: center;
-    padding: 0.5rem 0 1rem;
+    padding: 0.3rem 0 0.6rem;
 }
 
 .menu-logo img {
-    height: 40px;
+    height: 28px;
     width: auto;
     display: block;
     margin: auto;
@@ -155,26 +155,26 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 
 /* auth */
 .menu-auth {
-    padding: 0.8rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     background-color: rgba(237,233,227,0.45);
     flex-shrink: 0;
 }
 
 .menu-auth p {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     color: var(--texto-secundario);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
 }
 
 .menu-auth-buttons { display: flex; gap: 0.5rem; }
 
 .menu-btn-entrar {
     flex: 1;
-    padding: 10px 0;
+    padding: 8px 0;
     border: 1px solid var(--destaque);
     color: var(--destaque);
     font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     background: transparent;
@@ -183,11 +183,11 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 
 .menu-btn-cadastrar {
     flex: 1;
-    padding: 10px 0;
+    padding: 8px 0;
     background-color: var(--preto);
     color: var(--branco);
     font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     border: none;
@@ -211,8 +211,8 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 1.2rem;
-    font-size: 1rem;
+    padding: 14px 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: var(--texto-principal);
     letter-spacing: 0.01em;
@@ -271,32 +271,7 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     color: var(--texto-muted);
 }
 
-/* rodapé do menu */
-.menu-footer {
-    padding: 1rem 1.2rem;
-    text-align: center;
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--borda);
-    flex-shrink: 0;
-}
-
-.menu-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.4rem;
-    margin-bottom: 0.6rem;
-}
-
-.menu-social a {
-    font-size: 1.1rem;
-    color: var(--texto-secundario);
-    transition: color 0.2s;
-}
-
-.menu-social a:hover { color: var(--preto); }
-
-.menu-copyright {
-    font-size: 0.65rem;
-    color: var(--texto-muted);
-    letter-spacing: 0.05em;
-}
+/* rodapé do menu removido */
+.menu-footer { display: none; }
+.menu-social { display: none; }
+.menu-copyright { display: none; }

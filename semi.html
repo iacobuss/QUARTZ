@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quart'z – Semi-Joias de Luxo</title>
+    <link rel="stylesheet" href="./src/CSS/variables.css" />
+    <link rel="stylesheet" href="./src/CSS/global.css" />
+    <link rel="stylesheet" href="./src/CSS/semi.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="semi-header" class="header-transparente">
+        <nav class="navbar">
+            <button class="btn-menu" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="logo">
+                <img id="logo-img" src="./src/imagens/logo-branca.png" alt="Logo Quart'z">
+            </a>
+            <div class="navbar-actions">
+                <button class="btn-icon" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="btn-icon" aria-label="Carrinho">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="semi-hero">
+        <div class="semi-hero-titulo">
+            <h1>SEMI-JOIAS DE LUXO</h1>
+        </div>
+        <div class="semi-hero-track" id="semi-hero-track">
+            <div class="semi-hero-slide">
+                <img src="./src/imagens/banner-1-semi-mobile.png" alt="">
+                <div class="semi-hero-overlay"></div>
+            </div>
+            <div class="semi-hero-slide">
+                <img src="./src/imagens/banner-2-semi-mobile.png" alt="">
+                <div class="semi-hero-overlay"></div>
+            </div>
+            <div class="semi-hero-slide">
+                <img src="./src/imagens/banner-3-semi-mobile.png" alt="">
+                <div class="semi-hero-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLOGAN ===== -->
+    <div class="semi-slogan">
+        <p>Sua versão mais elegante começa aqui — descubra seu brilho.</p>
+    </div>
+
+    <!-- ===== FILTROS ===== -->
+    <div class="filtros-wrapper">
+        <div class="filtros-bar">
+            <div class="ordenar-wrapper">
+                <button class="btn-ordenar" id="btn-ordenar">
+                    ORDENAR POR
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="ordenar-dropdown" id="ordenar-dropdown">
+                    <button class="ordenar-opcao" data-ordem="maior-preco">Maior preço</button>
+                    <button class="ordenar-opcao" data-ordem="menor-preco">Menor preço</button>
+                    <button class="ordenar-opcao" data-ordem="banho-ouro">Banho de ouro</button>
+                    <button class="ordenar-opcao" data-ordem="banho-prata">Banho de prata</button>
+                    <button class="ordenar-opcao" data-ordem="pingentes">Pingentes</button>
+                    <button class="ordenar-opcao" data-ordem="brincos">Brincos</button>
+                    <button class="ordenar-opcao" data-ordem="aneis">Anéis</button>
+                    <button class="ordenar-opcao" data-ordem="pulseiras">Pulseiras</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== GRID DE PRODUTOS ===== -->
+    <main class="produtos-grid">
+
+        <div class="produto-card" data-banho="ouro" data-categoria="pingentes" data-ordem-orig="1">
+            <div class="produto-imagem">
+                <span class="produto-badge">Novo</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/ametista.png" alt="Colar Gota Dourada">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Colar Gota Dourada</span>
+            <span class="produto-preco">R$ 189</span>
+            <span class="produto-parcelamento">3x R$ 63,00</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="aneis" data-ordem-orig="2">
+            <div class="produto-imagem">
+                <span class="produto-badge">Novo</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/anel-ame-prata.png" alt="Anel Zircônia Cristal">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Anel Zircônia Cristal</span>
+            <span class="produto-preco">R$ 149</span>
+            <span class="produto-parcelamento">3x R$ 49,67</span>
+        </div>
+
+        <div class="produto-card" data-banho="ouro" data-categoria="pulseiras" data-ordem-orig="3">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/rivieira.png" alt="Pulseira Riviera Dourada">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Pulseira Riviera Dourada</span>
+            <span class="produto-preco">R$ 229</span>
+            <span class="produto-parcelamento">3x R$ 76,33</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="pingentes" data-ordem-orig="4">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/colar-lua.png" alt="Colar Lua Prateada">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Colar Lua Prateada</span>
+            <span class="produto-preco">R$ 119</span>
+            <span class="produto-parcelamento">3x R$ 39,67</span>
+        </div>
+
+        <div class="produto-card" data-banho="ouro" data-categoria="brincos" data-ordem-orig="5">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/anel-prata-malaquita.png" alt="Brinco Argola Dourada">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Brinco Argola Dourada</span>
+            <span class="produto-preco">R$ 99</span>
+            <span class="produto-parcelamento">3x R$ 33,00</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="brincos" data-ordem-orig="6">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/anel-verde-prata.png" alt="Brinco Ponto de Luz Prata">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Brinco Ponto de Luz Prata</span>
+            <span class="produto-preco">R$ 89</span>
+            <span class="produto-parcelamento">3x R$ 29,67</span>
+        </div>
+
+        <div class="produto-card" data-banho="ouro" data-categoria="aneis" data-ordem-orig="7">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/colar-esmeralda.png" alt="Anel Solitário Dourado">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Anel Solitário Dourado</span>
+            <span class="produto-preco">R$ 169</span>
+            <span class="produto-parcelamento">3x R$ 56,33</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="pulseiras" data-ordem-orig="8">
+            <div class="produto-imagem">
+                <span class="produto-badge">Promoção</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/rivieira.png" alt="Pulseira Elos Prata">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Pulseira Elos Prata</span>
+            <span class="produto-preco">R$ 139</span>
+            <span class="produto-parcelamento">3x R$ 46,33</span>
+        </div>
+
+        <div class="produto-card" data-banho="ouro" data-categoria="pingentes" data-ordem-orig="9">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/ametista.png" alt="Colar Coração Dourado">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Colar Coração Dourado</span>
+            <span class="produto-preco">R$ 159</span>
+            <span class="produto-parcelamento">3x R$ 53,00</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="aneis" data-ordem-orig="10">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/anel-ame-prata.png" alt="Anel Infinito Prata">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Anel Infinito Prata</span>
+            <span class="produto-preco">R$ 129</span>
+            <span class="produto-parcelamento">3x R$ 43,00</span>
+        </div>
+
+        <div class="produto-card" data-banho="ouro" data-categoria="brincos" data-ordem-orig="11">
+            <div class="produto-imagem">
+                <span class="produto-badge">Novo</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/colar-lua.png" alt="Brinco Gota Dourado">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Brinco Gota Dourado</span>
+            <span class="produto-preco">R$ 109</span>
+            <span class="produto-parcelamento">3x R$ 36,33</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="pulseiras" data-ordem-orig="12">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/rivieira.png" alt="Pulseira Cristais Prata">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Pulseira Cristais Prata</span>
+            <span class="produto-preco">R$ 179</span>
+            <span class="produto-parcelamento">3x R$ 59,67</span>
+        </div>
+
+        <div class="produto-card" data-banho="ouro" data-categoria="pulseiras" data-ordem-orig="13">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/rivieira.png" alt="Bracelete Slim Dourado">
+            </div>
+            <span class="produto-metal">Banho de Ouro 18k</span>
+            <span class="produto-nome">Bracelete Slim Dourado</span>
+            <span class="produto-preco">R$ 199</span>
+            <span class="produto-parcelamento">3x R$ 66,33</span>
+        </div>
+
+        <div class="produto-card" data-banho="prata" data-categoria="pingentes" data-ordem-orig="14">
+            <div class="produto-imagem">
+                <span class="produto-badge">Promoção</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/colar-lua.png" alt="Colar Borboleta Prata">
+            </div>
+            <span class="produto-metal">Banho de Prata</span>
+            <span class="produto-nome">Colar Borboleta Prata</span>
+            <span class="produto-preco">R$ 109</span>
+            <span class="produto-parcelamento">3x R$ 36,33</span>
+        </div>
+
+    </main>
+
+    <!-- ===== TEXTO SEO ===== -->
+    <section class="seo-texto">
+        <h2>Semi-Joias de Luxo</h2>
+        <p>Eleve seu estilo com semi-joias de luxo que unem sofisticação, brilho e exclusividade em cada detalhe. Nossa coleção foi pensada para mulheres que desejam se destacar com elegância, sem abrir mão da versatilidade e do custo-benefício inteligente.</p>
+        <p>Cada peça é desenvolvida com acabamento impecável e design refinado, trazendo o visual de joias de alto padrão com mais acessibilidade. São semi-joias que acompanham você em todos os momentos — desde ocasiões especiais até o dia a dia — sempre adicionando um toque de glamour e confiança ao seu visual.</p>
+        <p>Trabalhamos com materiais de alta qualidade e banhos duradouros, garantindo peças resistentes, confortáveis e com brilho intenso por muito mais tempo. Aqui, cada detalhe importa: do desenho exclusivo ao cuidado na fabricação, tudo é pensado para valorizar sua beleza e destacar sua presença.</p>
+        <p>Escolha agora suas favoritas e transforme qualquer look em algo memorável. Nossas coleções são limitadas, o que torna cada peça ainda mais especial. Garanta já a sua e descubra como uma semi-joia de luxo pode fazer toda a diferença no seu estilo.</p>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="rodape-newsletter">
+            <h3 class="rodape-newsletter-titulo">Newsletter</h3>
+            <p class="rodape-newsletter-desc">Receba primeiro as novidades e ofertas exclusivas.</p>
+            <div class="rodape-newsletter-form">
+                <input type="email" placeholder="Digite aqui o seu e-mail" class="rodape-input">
+                <button class="rodape-btn-enviar">Enviar</button>
+            </div>
+            <label class="rodape-checkbox">
+                <input type="checkbox">
+                <span>Li e concordo com a Política de privacidade</span>
+            </label>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">
+                ATENDIMENTO AO CLIENTE
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="rodape-accordion-content">
+                <a href="#">WhatsApp</a>
+                <a href="#">contato@quartz.com.br</a>
+                <a href="#">Política de trocas</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">
+                SOBRE A QUART'Z
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="rodape-accordion-content">
+                <a href="#">Nossa história</a>
+                <a href="#">Energia das pedras</a>
+                <a href="#">Como cuidar das joias</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">
+                CONDIÇÕES LEGAIS
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="rodape-accordion-content">
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de uso</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-bottom">
+            <div class="rodape-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="rodape-copyright">© 2026 Quart'z – Todos os direitos reservados</p>
+            <p class="rodape-cnpj">CNPJ 37.643.147/0001-00</p>
+            <p class="rodape-localizacao">Av. das Cataratas, 3570 - Vila Yolanda, Foz do Iguaçu - PR, 85853-000</p>
+        </div>
+    </footer>
+
+    <!-- ===== MENU LATERAL ===== -->
+    <div id="nav-links" class="menu">
+        <div class="menu-header">
+            <button class="btn-close" aria-label="Fechar menu"><i class="fa-solid fa-times"></i></button>
+            <a href="index.html" class="menu-logo"><img src="./src/imagens/logo-preta.png" alt="Logo Quart'z"></a>
+            <hr class="menu-divider">
+        </div>
+        <div class="menu-auth">
+            <p>Olá, faça login ou cadastre-se</p>
+            <div class="menu-auth-buttons">
+                <button class="menu-btn-entrar">ENTRAR</button>
+                <button class="menu-btn-cadastrar">CADASTRAR</button>
+            </div>
+        </div>
+        <div class="menu-section menu-section-principal">
+            <ul>
+                <li><a href="joias.html">Joias Finas <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="semi.html">Semi-Joias de Luxo <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Diamantes Lab. <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Coleções <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Novidades <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+        <div class="menu-section-descubra">
+            <span class="menu-section-label">DESCUBRA</span>
+            <ul>
+                <li><a href="#">Energia das pedras <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Como cuidar das joias <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+        <div class="menu-footer">
+            <div class="menu-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="menu-copyright">© 2026 Quart'z</p>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <script src="./src/js/semi.js"></script>
+</body>
+</html>
