@@ -62,7 +62,6 @@ header.header-solido {
     background-color: var(--bg-header);
     border-bottom: 1px solid var(--borda);
     box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-    height: 48px;
 }
 
 header.header-solido .btn-menu,
@@ -1055,12 +1054,12 @@ header.header-solido {
 }
 
 header.header-solido .logo img {
-    height: 28px;
+    height: 24px;
 }
 
 /* logo preta no header sólido */
 header.header-solido #logo-img {
-    content: url('./src/imagens/logo-preta.png');
+    content: url('../imagens/logo-preta.png');
 }
 
 /* ===== CATEGORIAS — título centralizado e preto ===== */
