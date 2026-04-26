@@ -14,13 +14,13 @@
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header>
+    <header id="joias-header" class="header-transparente">
         <nav class="navbar">
             <button class="btn-menu" aria-label="Abrir menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="logo">
-                <img src="./src/imagens/logo-preta.png" alt="Logo Quart'z">
+                <img id="logo-img" src="./src/imagens/logo-branca.png" alt="Logo Quart'z">
             </div>
             <div class="navbar-actions">
                 <button class="btn-icon" aria-label="Buscar">
@@ -33,22 +33,52 @@
         </nav>
     </header>
 
-    <!-- ===== TOPO DA PÁGINA ===== -->
-    <div class="info-page">
-        <span>INÍCIO · PRODUTOS</span>
-    </div>
+    <!-- ===== HERO — carrossel decorativo automático ===== -->
+    <section class="joias-hero">
+        <div class="joias-hero-titulo">
+            <h1>JOIAS COM PEDRAS NATURAIS</h1>
+        </div>
+        <div class="joias-hero-track" id="joias-hero-track">
+            <div class="joias-hero-slide">
+                <img src="./src/imagens/banner-2-joias.png" alt="">
+                <div class="joias-hero-overlay"></div>
+            </div>
+            <div class="joias-hero-slide">
+                <img src="./src/imagens/banner-joias-2.png" alt="">
+                <div class="joias-hero-overlay"></div>
+            </div>
+            <div class="joias-hero-slide">
+                <img src="./src/imagens/banner-joias-3.png" alt="">
+                <div class="joias-hero-overlay"></div>
+            </div>
+        </div>
+    </section>
 
-    <div class="titulo-pagina">
-        <h1>Joias com pedras naturais</h1>
-    </div>
-
-    <p class="subtitulo-pagina">34 peças disponíveis</p>
-
-    <!-- ===== ABAS DE FILTRO ===== -->
-    <div class="selecao">
-        <button class="btn-aba active" data-filtro="todos">Todos</button>
-        <button class="btn-aba" data-filtro="ouro">Ouro 18k</button>
-        <button class="btn-aba" data-filtro="prata">Prata</button>
+    <!-- ===== FILTROS ===== -->
+    <div class="filtros-wrapper">
+        <!-- linha 1: abas centralizadas -->
+        <div class="selecao">
+            <button class="btn-aba active" data-filtro="todos">TODOS</button>
+            <button class="btn-aba" data-filtro="ouro">OURO 18K</button>
+            <button class="btn-aba" data-filtro="prata">PRATA</button>
+        </div>
+        <!-- linha 2: só ordenar por -->
+        <div class="filtros-bar">
+            <div class="ordenar-wrapper">
+                <button class="btn-ordenar" id="btn-ordenar">
+                    ORDENAR POR
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="ordenar-dropdown" id="ordenar-dropdown">
+                    <button class="ordenar-opcao" data-ordem="maior-preco">Maior preço</button>
+                    <button class="ordenar-opcao" data-ordem="menor-preco">Menor preço</button>
+                    <button class="ordenar-opcao" data-ordem="pingentes">Pingentes</button>
+                    <button class="ordenar-opcao" data-ordem="brincos">Brincos</button>
+                    <button class="ordenar-opcao" data-ordem="aneis">Anéis</button>
+                    <button class="ordenar-opcao" data-ordem="pulseiras">Pulseiras</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- ===== GRID DE PRODUTOS ===== -->
@@ -58,7 +88,7 @@
             <div class="produto-imagem">
                 <span class="produto-badge">Novo</span>
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                    <img src="./src/imagens/ametista.png" alt="colar ametista" />
+                <img src="./src/imagens/ametista.png" alt="Colar Gota Ametista">
             </div>
             <span class="produto-metal">Ouro 18k</span>
             <span class="produto-nome">Colar Gota Ametista</span>
@@ -70,7 +100,7 @@
             <div class="produto-imagem">
                 <span class="produto-badge">Novo</span>
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                    <img src="./src/imagens/anel-ame-prata.png" alt="anel ametista infinito">
+                <img src="./src/imagens/anel-ame-prata.png" alt="Anel Ametista Redondo">
             </div>
             <span class="produto-metal">Prata 950</span>
             <span class="produto-nome">Anel Ametista Redondo</span>
@@ -81,7 +111,7 @@
         <div class="produto-card" data-metal="ouro">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                    <img src="./src/imagens/rivieira.png" alt="">
+                <img src="./src/imagens/rivieira.png" alt="Pulseira Riviera Esmeralda">
             </div>
             <span class="produto-metal">Ouro 18k</span>
             <span class="produto-nome">Pulseira Riviera Esmeralda</span>
@@ -92,7 +122,7 @@
         <div class="produto-card" data-metal="prata">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                    <img src="./src/imagens/colar-lua.png" alt="">
+                <img src="./src/imagens/colar-lua.png" alt="Colar Pedra da Lua">
             </div>
             <span class="produto-metal">Prata 950</span>
             <span class="produto-nome">Colar Pedra da Lua</span>
@@ -103,7 +133,7 @@
         <div class="produto-card" data-metal="prata">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                    <img src="./src/imagens/anel-prata-malaquita.png" alt="">
+                <img src="./src/imagens/anel-prata-malaquita.png" alt="Anel de Malaquita">
             </div>
             <span class="produto-metal">Prata 950</span>
             <span class="produto-nome">Anel de Malaquita</span>
@@ -114,7 +144,7 @@
         <div class="produto-card" data-metal="prata">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                <img src="./src/imagens/anel-verde-prata.png" alt="">
+                <img src="./src/imagens/anel-verde-prata.png" alt="Anel de Esmeralda">
             </div>
             <span class="produto-metal">Prata 950</span>
             <span class="produto-nome">Anel de Esmeralda</span>
@@ -125,9 +155,9 @@
         <div class="produto-card" data-metal="ouro">
             <div class="produto-imagem">
                 <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
-                <img src="./src/imagens/colar-esmeralda.png" alt="">
+                <img src="./src/imagens/colar-esmeralda.png" alt="Colar de Esmeralda">
             </div>
-            <span class="produto-metal">Ouro 18K</span>
+            <span class="produto-metal">Ouro 18k</span>
             <span class="produto-nome">Colar de Esmeralda</span>
             <span class="produto-preco">R$ 759</span>
             <span class="produto-parcelamento">3x R$ 253,00</span>
@@ -137,32 +167,72 @@
 
     <!-- ===== RODAPÉ ===== -->
     <footer class="rodape">
-        <p>© 2025 Quart'z – Todos os direitos reservados</p>
-    </footer>
+        <div class="rodape-newsletter">
+            <h3 class="rodape-newsletter-titulo">Newsletter</h3>
+            <p class="rodape-newsletter-desc">Receba primeiro as novidades e ofertas exclusivas.</p>
+            <div class="rodape-newsletter-form">
+                <input type="email" placeholder="Digite aqui o seu e-mail" class="rodape-input">
+                <button class="rodape-btn-enviar">Enviar</button>
+            </div>
+            <label class="rodape-checkbox">
+                <input type="checkbox">
+                <span>Li e concordo com a Política de privacidade</span>
+            </label>
+        </div>
 
-    <!-- ===== BARRA INFERIOR ===== -->
-    <nav class="bottom-nav">
-        <a href="#" class="bottom-item">
-            <i class="fa-solid fa-house"></i>
-            <span>Início</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Buscar</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-regular fa-heart"></i>
-            <span>Favoritos</span>
-        </a>
-        <a href="#" class="bottom-item active">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span>Carrinho</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-regular fa-user"></i>
-            <span>Conta</span>
-        </a>
-    </nav>
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">
+                ATENDIMENTO AO CLIENTE
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="rodape-accordion-content">
+                <a href="#">WhatsApp</a>
+                <a href="#">contato@quartz.com.br</a>
+                <a href="#">Política de trocas</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">
+                SOBRE A QUART'Z
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="rodape-accordion-content">
+                <a href="#">Nossa história</a>
+                <a href="#">Energia das pedras</a>
+                <a href="#">Como cuidar das joias</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">
+                CONDIÇÕES LEGAIS
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="rodape-accordion-content">
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de uso</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-bottom">
+            <div class="rodape-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="rodape-copyright">© 2025 Quart'z – Todos os direitos reservados</p>
+            <p class="rodape-cnpj">Foz do Iguaçu, PR</p>
+        </div>
+    </footer>
 
     <!-- ===== MENU LATERAL ===== -->
     <div id="nav-links" class="menu">
@@ -175,7 +245,6 @@
             </div>
             <hr class="menu-divider">
         </div>
-
         <div class="menu-auth">
             <p>Olá, faça login ou cadastre-se</p>
             <div class="menu-auth-buttons">
@@ -183,7 +252,6 @@
                 <button class="menu-btn-cadastrar">CADASTRAR</button>
             </div>
         </div>
-
         <div class="menu-section">
             <span class="menu-section-label">COLEÇÕES</span>
             <ul>
@@ -195,9 +263,7 @@
                 <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </div>
-
         <hr class="menu-divider">
-
         <div class="menu-section">
             <span class="menu-section-label">DESCUBRA</span>
             <ul>
@@ -206,9 +272,7 @@
                 <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </div>
-
         <hr class="menu-divider">
-
         <div class="menu-section menu-atendimento">
             <span class="menu-section-label">ATENDIMENTO</span>
             <ul>
@@ -217,9 +281,7 @@
                 <li><a href="#"><i class="fa-solid fa-location-dot"></i>Foz do Iguaçu, PR</a></li>
             </ul>
         </div>
-
         <hr class="menu-divider">
-
         <div class="menu-footer">
             <div class="menu-social">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -231,7 +293,6 @@
     </div>
 
     <div class="overlay"></div>
-
     <script src="./src/js/script.js"></script>
     <script src="./src/js/joias.js"></script>
 </body>

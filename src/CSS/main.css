@@ -345,51 +345,7 @@ header.header-solido .btn-icon {
     letter-spacing: 0.02em;
 }
 
-/* ===== SEÇÃO PROMOÇÕES ===== */
-.secao-promo {
-    background-color: var(--bg-secao);
-    border-top: 1px solid var(--borda);
-    padding-bottom: 1.6rem;
-}
-
-.promo-carrossel {
-    position: relative;
-    overflow: hidden;
-    padding: 0 1rem;
-}
-
-.promo-track {
-    display: flex;
-    transition: transform 0.4s ease;
-}
-
-.promo-slide {
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.promo-img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    background-color: var(--bg-card);
-    overflow: hidden;
-    border-radius: 2px;
-}
-
-.promo-img img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-}
-
-.promo-info {
-    padding: 1rem 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
+/* ===== SEÇÃO PROMOÇÕES — base (sobrescrita pela versão final abaixo) ===== */
 
 .promo-badge {
     font-size: 0.6rem;
@@ -609,7 +565,7 @@ header.header-solido .btn-icon {
     position: absolute;
     inset: 0;
     background-color: var(--bg-card);
-    background-image: url('../imagens/banner-colecoes.jpg');
+    background-image: url('../imagens/coleções\ logo.png');
     background-size: cover;
     background-position: center;
     transition: transform 0.4s ease;
@@ -1102,7 +1058,7 @@ header.header-solido #logo-img {
     display: flex;
     align-items: center;
     gap: 0;
-    padding: 0;
+    padding: 0 1rem;
     position: relative;
 }
 
@@ -1182,7 +1138,6 @@ header.header-solido #logo-img {
 /* ===== COLEÇÕES — bloco estilo Swarovski ===== */
 .secao-colecoes-bloco {
     background-color: var(--bg-principal);
-    border-top: 1px solid var(--borda);
 }
 
 .secao-titulo-colecoes {
@@ -1196,31 +1151,33 @@ header.header-solido #logo-img {
 }
 
 .colecao-bloco {
-    border-top: 1px solid var(--borda);
     padding-bottom: 2rem;
     background-color: var(--bg-principal);
 }
 
 .colecao-bloco-alt {
     background-color: var(--bg-secao);
+    border-top: 1px solid var(--borda);
+    padding-top: 2rem;
 }
 
 /* wrapper carrossel com setas */
 .colecao-carrossel-wrap {
     display: flex;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .colecao-seta {
     flex-shrink: 0;
-    width: 36px;
+    width: 32px;
     background: none;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--preto);
     cursor: pointer;
-    padding: 0 6px;
+    padding: 0 4px;
     line-height: 1;
     z-index: 2;
     transition: opacity 0.2s;
@@ -1239,8 +1196,9 @@ header.header-solido #logo-img {
     transition: transform 0.4s ease;
 }
 
+/* 100% = exatamente 1 slide visível por vez */
 .colecao-slide {
-    min-width: 90%;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -1250,14 +1208,19 @@ header.header-solido #logo-img {
     aspect-ratio: 3/4;
     background-color: var(--bg-card);
     overflow: hidden;
+    border: 1px solid var(--borda);
 }
 
 .colecao-img img {
-    width: 100%; height: 100%; object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .colecao-info {
-    padding: 0.8rem 0.4rem 0.2rem;
+    padding: 0.8rem 0 0.2rem;
 }
 
 .colecao-prod-nome {
@@ -1331,7 +1294,7 @@ header.header-solido #logo-img {
 
 .banner-novidades-bg {
     background-color: var(--bg-card-hover);
-    background-image: url('../imagens/banner-novidades.jpg');
+    background-image: url('../imagens/novidades-logo.png');
     background-size: cover;
     background-position: center;
 }
