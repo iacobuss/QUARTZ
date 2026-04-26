@@ -28,3 +28,84 @@ bottomItems.forEach(item => {
         item.classList.add('active');
     });
 });
+
+// ===== ACCORDION DO RODAPÉ =====
+const accordionBtns = document.querySelectorAll('.rodape-accordion-btn');
+
+accordionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const estaAberto = btn.classList.contains('aberto');
+
+        accordionBtns.forEach(b => {
+            b.classList.remove('aberto');
+            b.nextElementSibling.classList.remove('aberto');
+        });
+
+        if (!estaAberto) {
+            btn.classList.add('aberto');
+            content.classList.add('aberto');
+        }
+    });
+});
+
+// ===== HEADER — transparente enquanto hero visível, sólido ao sair =====
+const header    = document.getElementById('site-header');
+const logoImg   = document.getElementById('logo-img');
+const heroEl    = document.querySelector('.hero');
+const logoWhite = './src/imagens/logo.branco.png';
+const logoBlack = './src/imagens/logo-preta.png';
+
+function updateHeader() {
+    // pega a altura atual do hero (pode mudar com resize)
+    const heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
+    // quando o bottom do hero passa do header (64px), fica sólido
+    if (heroBottom <= 70) {
+        header.classList.remove('header-transparente', 'header-grande');
+        header.classList.add('header-solido');
+        logoImg.src = logoBlack;
+    } else {
+        header.classList.add('header-transparente', 'header-grande');
+        header.classList.remove('header-solido');
+        logoImg.src = logoWhite;
+    }
+}
+
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
+
+// ===== CARROSSEL GENÉRICO =====
+function initCarrossel(trackId, prevSelector, nextSelector, dotsSelector) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+
+    const wrap   = track.closest('.promo-carrossel-wrap, .colecao-carrossel-wrap');
+    const prev   = wrap ? wrap.querySelector(prevSelector) : null;
+    const next   = wrap ? wrap.querySelector(nextSelector) : null;
+
+    // dots podem ser externos (promoções) ou não existir (coleções)
+    const dotsWrap = dotsSelector ? document.getElementById(dotsSelector) : null;
+    const dots     = dotsWrap ? dotsWrap.querySelectorAll('.promo-dot') : [];
+
+    const slides = track.children;
+    const total  = slides.length;
+    let current  = 0;
+
+    function goTo(idx) {
+        current = (idx + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    if (prev) prev.addEventListener('click', () => goTo(current - 1));
+    if (next) next.addEventListener('click', () => goTo(current + 1));
+}
+
+// Promoções
+initCarrossel('promo-track', '.promo-seta-prev', '.promo-seta-next', 'promo-dots');
+
+// Coleção Praia
+initCarrossel('colecao-praia-track', '.colecao-seta-prev', '.colecao-seta-next', null);
+
+// Coleção Pedra do Ano
+initCarrossel('colecao-pedra-track', '.colecao-seta-prev', '.colecao-seta-next', null);

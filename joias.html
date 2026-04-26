@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quart'z – Joias com Pedras Naturais</title>
+    <link rel="stylesheet" href="./src/CSS/variables.css" />
+    <link rel="stylesheet" href="./src/CSS/joias.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav class="navbar">
+            <button class="btn-menu" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="./src/imagens/logo-preta.png" alt="Logo Quart'z">
+            </div>
+            <div class="navbar-actions">
+                <button class="btn-icon" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="btn-icon" aria-label="Carrinho">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== TOPO DA PÁGINA ===== -->
+    <div class="info-page">
+        <span>INÍCIO · PRODUTOS</span>
+    </div>
+
+    <div class="titulo-pagina">
+        <h1>Joias com pedras naturais</h1>
+    </div>
+
+    <p class="subtitulo-pagina">34 peças disponíveis</p>
+
+    <!-- ===== ABAS DE FILTRO ===== -->
+    <div class="selecao">
+        <button class="btn-aba active" data-filtro="todos">Todos</button>
+        <button class="btn-aba" data-filtro="ouro">Ouro 18k</button>
+        <button class="btn-aba" data-filtro="prata">Prata</button>
+    </div>
+
+    <!-- ===== GRID DE PRODUTOS ===== -->
+    <main class="produtos-grid">
+
+        <div class="produto-card" data-metal="ouro">
+            <div class="produto-imagem">
+                <span class="produto-badge">Novo</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                    <img src="./src/imagens/ametista.png" alt="colar ametista" />
+            </div>
+            <span class="produto-metal">Ouro 18k</span>
+            <span class="produto-nome">Colar Gota Ametista</span>
+            <span class="produto-preco">R$ 349</span>
+            <span class="produto-parcelamento">3x R$ 116,33</span>
+        </div>
+
+        <div class="produto-card" data-metal="prata">
+            <div class="produto-imagem">
+                <span class="produto-badge">Novo</span>
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                    <img src="./src/imagens/anel-ame-prata.png" alt="anel ametista infinito">
+            </div>
+            <span class="produto-metal">Prata 950</span>
+            <span class="produto-nome">Anel Ametista Redondo</span>
+            <span class="produto-preco">R$ 289</span>
+            <span class="produto-parcelamento">3x R$ 96,33</span>
+        </div>
+
+        <div class="produto-card" data-metal="ouro">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                    <img src="./src/imagens/rivieira.png" alt="">
+            </div>
+            <span class="produto-metal">Ouro 18k</span>
+            <span class="produto-nome">Pulseira Riviera Esmeralda</span>
+            <span class="produto-preco">R$ 489</span>
+            <span class="produto-parcelamento">3x R$ 163,00</span>
+        </div>
+
+        <div class="produto-card" data-metal="prata">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                    <img src="./src/imagens/colar-lua.png" alt="">
+            </div>
+            <span class="produto-metal">Prata 950</span>
+            <span class="produto-nome">Colar Pedra da Lua</span>
+            <span class="produto-preco">R$ 219</span>
+            <span class="produto-parcelamento">3x R$ 73,00</span>
+        </div>
+
+        <div class="produto-card" data-metal="prata">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                    <img src="./src/imagens/anel-prata-malaquita.png" alt="">
+            </div>
+            <span class="produto-metal">Prata 950</span>
+            <span class="produto-nome">Anel de Malaquita</span>
+            <span class="produto-preco">R$ 319</span>
+            <span class="produto-parcelamento">3x R$ 106,33</span>
+        </div>
+
+        <div class="produto-card" data-metal="prata">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/anel-verde-prata.png" alt="">
+            </div>
+            <span class="produto-metal">Prata 950</span>
+            <span class="produto-nome">Anel de Esmeralda</span>
+            <span class="produto-preco">R$ 259</span>
+            <span class="produto-parcelamento">3x R$ 86,33</span>
+        </div>
+
+        <div class="produto-card" data-metal="ouro">
+            <div class="produto-imagem">
+                <button class="produto-favorito"><i class="fa-regular fa-heart"></i></button>
+                <img src="./src/imagens/colar-esmeralda.png" alt="">
+            </div>
+            <span class="produto-metal">Ouro 18K</span>
+            <span class="produto-nome">Colar de Esmeralda</span>
+            <span class="produto-preco">R$ 759</span>
+            <span class="produto-parcelamento">3x R$ 253,00</span>
+        </div>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <p>© 2025 Quart'z – Todos os direitos reservados</p>
+    </footer>
+
+    <!-- ===== BARRA INFERIOR ===== -->
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Início</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Buscar</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-regular fa-heart"></i>
+            <span>Favoritos</span>
+        </a>
+        <a href="#" class="bottom-item active">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Carrinho</span>
+        </a>
+        <a href="#" class="bottom-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Conta</span>
+        </a>
+    </nav>
+
+    <!-- ===== MENU LATERAL ===== -->
+    <div id="nav-links" class="menu">
+        <div class="menu-header">
+            <button class="btn-close" aria-label="Fechar menu">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <div class="menu-logo">
+                <img src="./src/imagens/logo-preta.png" alt="Logo Quart'z">
+            </div>
+            <hr class="menu-divider">
+        </div>
+
+        <div class="menu-auth">
+            <p>Olá, faça login ou cadastre-se</p>
+            <div class="menu-auth-buttons">
+                <button class="menu-btn-entrar">ENTRAR</button>
+                <button class="menu-btn-cadastrar">CADASTRAR</button>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <span class="menu-section-label">COLEÇÕES</span>
+            <ul>
+                <li><a href="#">Joias finas <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Semi joias de luxo <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Coleção masculina <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Diamante de laboratório <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Lançamentos <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <hr class="menu-divider">
+
+        <div class="menu-section">
+            <span class="menu-section-label">DESCUBRA</span>
+            <ul>
+                <li><a href="#">Energia das pedras <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Como cuidar das joias <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <hr class="menu-divider">
+
+        <div class="menu-section menu-atendimento">
+            <span class="menu-section-label">ATENDIMENTO</span>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i>Falar no WhatsApp</a></li>
+                <li><a href="#"><i class="fa-regular fa-envelope"></i>contato@quartz.com.br</a></li>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i>Foz do Iguaçu, PR</a></li>
+            </ul>
+        </div>
+
+        <hr class="menu-divider">
+
+        <div class="menu-footer">
+            <div class="menu-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="menu-copyright">© 2026 Quart'z Joias com Pedras naturais</p>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/joias.js"></script>
+</body>
+</html>

@@ -14,28 +14,26 @@
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header>
+    <header id="site-header" class="header-transparente header-grande">
         <nav class="navbar">
-            <button class="btn btn-menu" aria-label="Abrir menu">
+            <button class="btn-menu" aria-label="Abrir menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-
             <div class="logo">
-                <img src="./src/imagens/logo-preta.png" alt="Logo Quart'z Preto">
+                <img id="logo-img" src="./src/imagens/logo.branco.png" alt="Logo Quart'z">
             </div>
-
             <div class="navbar-actions">
-                <button class="btn btn-icon" aria-label="Buscar">
+                <button class="btn-icon" aria-label="Buscar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <button class="btn btn-icon" aria-label="Carrinho">
+                <button class="btn-icon" aria-label="Carrinho">
                     <i class="fa-solid fa-bag-shopping"></i>
                 </button>
             </div>
         </nav>
     </header>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
@@ -50,179 +48,319 @@
         </div>
     </section>
 
-    <!-- ===== STATS ===== -->
-    <section class="stats">
-        <div class="stat-item">
-            <span class="stat-value">6+</span>
-            <span class="stat-label">anos de loja</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-            <span class="stat-value">100%</span>
-            <span class="stat-label">pedras naturais</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-            <i class="fa-solid fa-truck stat-icon"></i>
-            <span class="stat-label">frete seguro<br>grátis</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-            <div class="stat-circle">30</div>
-            <span class="stat-label">troca 30 dias</span>
+    <!-- ===== CARROSSEL DE CONFIANÇA ===== -->
+    <section class="trust-carousel">
+        <div class="trust-track">
+            <div class="trust-item"><i class="fa-solid fa-truck"></i><span>Frete grátis em pedidos acima de R$300</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-solid fa-rotate-left"></i><span>Troca grátis em até 30 dias</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span>Pagamento 100% seguro</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-regular fa-gem"></i><span>Pedras naturais certificadas</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-solid fa-store"></i><span>6 anos de loja física em Foz do Iguaçu</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-solid fa-truck"></i><span>Frete grátis em pedidos acima de R$300</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-solid fa-rotate-left"></i><span>Troca grátis em até 30 dias</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span>Pagamento 100% seguro</span></div>
         </div>
     </section>
 
-    <!-- ===== CATEGORIAS GRID ===== -->
-    <section class="categorias-grid">
-        <a href="#" class="categoria-card">
-            <div class="categoria-icon">
-                <!-- Ícone colar -->
-                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30 10 Q20 10 15 20 Q10 30 15 40 Q20 50 30 52 Q40 50 45 40 Q50 30 45 20 Q40 10 30 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <circle cx="30" cy="52" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <path d="M26 52 Q28 56 30 58 Q32 56 34 52" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                </svg>
-            </div>
-            <span class="categoria-nome">Joias finas</span>
-            <span class="categoria-sub">Ouro 18k e pedras naturais</span>
-        </a>
-
-        <a href="#" class="categoria-card">
-            <div class="categoria-icon">
-                <!-- Ícone brincos -->
-                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="22" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <circle cx="38" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <path d="M22 16 L18 28 L14 32 L18 38 L22 44 L26 38 L30 32 L26 28 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <path d="M38 16 L34 28 L30 32 L34 38 L38 44 L42 38 L46 32 L42 28 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                </svg>
-            </div>
-            <span class="categoria-nome">Semi joias de luxo</span>
-            <span class="categoria-sub">Banho de ouro e pedras</span>
-        </a>
-
-        <a href="#" class="categoria-card">
-            <div class="categoria-icon">
-                <!-- Ícone anel masculino -->
-                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="14" y="20" width="32" height="20" rx="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <rect x="20" y="26" width="20" height="8" rx="4" stroke="currentColor" stroke-width="1" fill="none"/>
-                    <path d="M14 30 Q10 30 10 30" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M46 30 Q50 30 50 30" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-            </div>
-            <span class="categoria-nome">Coleção masculina</span>
-            <span class="categoria-sub">Pedras naturais e metais nobres</span>
-        </a>
-
-        <a href="#" class="categoria-card">
-            <div class="categoria-icon">
-                <!-- Ícone diamante -->
-                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30 52 L8 24 L16 10 H44 L52 24 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    <path d="M8 24 H52" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M16 10 L22 24 L30 52" stroke="currentColor" stroke-width="1"/>
-                    <path d="M44 10 L38 24 L30 52" stroke="currentColor" stroke-width="1"/>
-                    <path d="M22 24 H38" stroke="currentColor" stroke-width="1"/>
-                </svg>
-            </div>
-            <span class="categoria-nome">Diamante lab.</span>
-            <span class="categoria-sub">Sustentável e certificado</span>
-        </a>
+    <!-- ===== CATEGORIAS ===== -->
+    <section class="secao-categorias">
+        <h2 class="secao-titulo secao-titulo-centro">CATEGORIAS</h2>
+        <div class="categorias-grid">
+            <a href="#" class="categoria-card">
+                <div class="categoria-foto">
+                    <img src="./src/imagens/brincos.png" alt="img brincos">
+                </div>
+                <span class="categoria-nome">Brincos</span>
+            </a>
+            <a href="#" class="categoria-card">
+                <div class="categoria-foto">
+                    <img src="./src/imagens/pulseiras.png" alt="img pulseiras">
+                </div>
+                <span class="categoria-nome">Pulseiras</span>
+            </a>
+            <a href="#" class="categoria-card">
+                <div class="categoria-foto">
+                    <img src="./src/imagens/pingentes.png" alt="img pingentes">
+                </div>
+                <span class="categoria-nome">Pingentes</span>
+            </a>
+            <a href="#" class="categoria-card">
+                <div class="categoria-foto">
+                    <img src="./src/imagens/aneis.png" alt="img aneis">
+                </div>
+                <span class="categoria-nome">Anéis</span>
+            </a>
+            <a href="#" class="categoria-card">
+                <div class="categoria-foto">
+                    <img src="./src/imagens/dialab.png" alt="img diamantes lab">
+                </div>
+                <span class="categoria-nome">Diamantes Lab.</span>
+            </a>
+            <a href="#" class="categoria-card">
+                <div class="categoria-foto">
+                    <img src="./src/imagens/conjuntos.png" alt="img conjuntos">
+                </div>
+                <span class="categoria-nome">Conjuntos</span>
+            </a>
+        </div>
     </section>
 
     <!-- ===== PROMOÇÕES ===== -->
-    <section class="secao-produtos">
-        <div class="secao-header">
-            <h2>Promoções</h2>
-            <a href="#">Ver todas</a>
+    <section class="secao-promo">
+        <h2 class="secao-titulo-promo">PROMOÇÕES</h2>
+        <p class="secao-subtitulo-promo">peças excelentes que vão te surpreender</p>
+
+        <div class="promo-carrossel-wrap">
+            <button class="promo-seta promo-seta-prev" aria-label="Anterior">&lt;</button>
+            <div class="promo-carrossel">
+                <div class="promo-track" id="promo-track">
+                    <div class="promo-slide">
+                        <div class="promo-img"></div>
+                        <div class="promo-info">
+                            <span class="promo-badge">PROMOÇÃO</span>
+                            <h3 class="promo-nome">Colar Gota Ametista</h3>
+                            <p class="promo-material">Prata 925 · Pedra natural</p>
+                            <div class="promo-precos">
+                                <span class="promo-preco-old">R$ 349</span>
+                                <span class="promo-preco">R$ 279</span>
+                            </div>
+                            <p class="promo-parcela">3x R$ 93,00 sem juros</p>
+                            <a href="#" class="promo-btn">VER PRODUTO</a>
+                        </div>
+                    </div>
+                    <div class="promo-slide">
+                        <div class="promo-img">
+                           
+                        </div>
+                        <div class="promo-info">
+                            <span class="promo-badge">PROMOÇÃO</span>
+                            <h3 class="promo-nome">Anel Olho de Tigre</h3>
+                            <p class="promo-material">Prata 925 · Pedra natural</p>
+                            <div class="promo-precos">
+                                <span class="promo-preco-old">R$ 319</span>
+                                <span class="promo-preco">R$ 249</span>
+                            </div>
+                            <p class="promo-parcela">3x R$ 83,00 sem juros</p>
+                            <a href="#" class="promo-btn">VER PRODUTO</a>
+                        </div>
+                    </div>
+                    <div class="promo-slide">
+                        <div class="promo-img"></div>
+                        <div class="promo-info">
+                            <span class="promo-badge">PROMOÇÃO</span>
+                            <h3 class="promo-nome">Pulseira Riviera Topazio London</h3>
+                            <p class="promo-material">Banho de ouro 18k · Pedra natural</p>
+                            <div class="promo-precos">
+                                <span class="promo-preco-old">R$ 489</span>
+                                <span class="promo-preco">R$ 389</span>
+                            </div>
+                            <p class="promo-parcela">3x R$ 129,67 sem juros</p>
+                            <a href="#" class="promo-btn">VER PRODUTO</a>
+                        </div>
+                    </div>
+                    <div class="promo-slide">
+                        <div class="promo-img"></div>
+                        <div class="promo-info">
+                            <span class="promo-badge">PROMOÇÃO</span>
+                            <h3 class="promo-nome">Brinco Gota Rubi</h3>
+                            <p class="promo-material">Prata 925 · Pedra natural</p>
+                            <div class="promo-precos">
+                                <span class="promo-preco-old">R$ 219</span>
+                                <span class="promo-preco">R$ 169</span>
+                            </div>
+                            <p class="promo-parcela">3x R$ 56,33 sem juros</p>
+                            <a href="#" class="promo-btn">VER PRODUTO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="promo-seta promo-seta-next" aria-label="Próximo">&gt;</button>
         </div>
-        <div class="produtos-lista">
-            <div class="produto-card">
-                <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 1</span>
-                <span class="produto-preco">R$ 99,90</span>
+        <div class="promo-dots" id="promo-dots">
+            <span class="promo-dot active"></span>
+            <span class="promo-dot"></span>
+            <span class="promo-dot"></span>
+            <span class="promo-dot"></span>
+        </div>
+    </section>
+
+    <!-- ===== COLEÇÕES ===== -->
+    <section class="secao-colecoes-bloco">
+        <h2 class="secao-titulo-colecoes">COLEÇÕES</h2>
+
+        <!-- COLEÇÃO PRAIA -->
+        <div class="colecao-bloco">
+            <div class="colecao-carrossel-wrap">
+                <button class="colecao-seta colecao-seta-prev" aria-label="Anterior">&lt;</button>
+                <div class="colecao-carrossel">
+                    <div class="colecao-track" id="colecao-praia-track">
+                        <div class="colecao-slide">
+                            <div class="colecao-img"></div>
+                            <div class="colecao-info">
+                                <h3 class="colecao-prod-nome">Colar Concha Dourada</h3>
+                                <p class="colecao-prod-preco">R$ 189,90</p>
+                                <p class="colecao-prod-parcela">3x R$ 63,30 sem juros</p>
+                            </div>
+                        </div>
+                        <div class="colecao-slide">
+                            <div class="colecao-img"></div>
+                            <div class="colecao-info">
+                                <h3 class="colecao-prod-nome">Pulseira Areia & Mar</h3>
+                                <p class="colecao-prod-preco">R$ 229,90</p>
+                                <p class="colecao-prod-parcela">3x R$ 76,63 sem juros</p>
+                            </div>
+                        </div>
+                        <div class="colecao-slide">
+                            <div class="colecao-img"></div>
+                            <div class="colecao-info">
+                                <h3 class="colecao-prod-nome">Brinco Estrela do Mar</h3>
+                                <p class="colecao-prod-preco">R$ 159,90</p>
+                                <p class="colecao-prod-parcela">3x R$ 53,30 sem juros</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="colecao-seta colecao-seta-next" aria-label="Próximo">&gt;</button>
             </div>
-            <div class="produto-card">
-                <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 2</span>
-                <span class="produto-preco">R$ 149,90</span>
+            <div class="colecao-texto">
+                <p class="colecao-tag-label">COLEÇÃO PRAIA</p>
+                <p class="colecao-desc-texto">Semi joias de luxo criadas para quem carrega o verão dentro de si. Peças leves, cheias de brilho e energia — perfeitas para acompanhar cada momento à beira-mar. Inspiradas nas cores e formas do oceano, cada peça traduz a liberdade das ondas, a delicadeza das conchas e o calor da areia dourada. São adornos que contam histórias de sol, sal e alegria, ideais para quem quer levar um pouco do paraíso no pulso, no pescoço e nas orelhas.</p>
             </div>
-            <div class="produto-card">
-                <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 3</span>
-                <span class="produto-preco">R$ 199,90</span>
+        </div>
+
+        <!-- COLEÇÃO PEDRA DO ANO -->
+        <div class="colecao-bloco colecao-bloco-alt">
+            <div class="colecao-carrossel-wrap">
+                <button class="colecao-seta colecao-seta-prev" aria-label="Anterior">&lt;</button>
+                <div class="colecao-carrossel">
+                    <div class="colecao-track" id="colecao-pedra-track">
+                        <div class="colecao-slide">
+                            <div class="colecao-img"></div>
+                            <div class="colecao-info">
+                                <h3 class="colecao-prod-nome">Colar Água-marinha</h3>
+                                <p class="colecao-prod-preco">R$ 289,90</p>
+                                <p class="colecao-prod-parcela">3x R$ 96,63 sem juros</p>
+                            </div>
+                        </div>
+                        <div class="colecao-slide">
+                            <div class="colecao-img"></div>
+                            <div class="colecao-info">
+                                <h3 class="colecao-prod-nome">Anel Água-marinha</h3>
+                                <p class="colecao-prod-preco">R$ 319,90</p>
+                                <p class="colecao-prod-parcela">3x R$ 106,63 sem juros</p>
+                            </div>
+                        </div>
+                        <div class="colecao-slide">
+                            <div class="colecao-img"></div>
+                            <div class="colecao-info">
+                                <h3 class="colecao-prod-nome">Brinco Água-marinha</h3>
+                                <p class="colecao-prod-preco">R$ 249,90</p>
+                                <p class="colecao-prod-parcela">3x R$ 83,30 sem juros</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="colecao-seta colecao-seta-next" aria-label="Próximo">&gt;</button>
+            </div>
+            <div class="colecao-texto">
+                <p class="colecao-tag-label">COLEÇÃO PEDRA DO ANO 2026</p>
+                <p class="colecao-desc-texto">A água-marinha foi eleita a pedra do ano de 2026 por sua energia única de calma, clareza e renovação. Com tonalidades que variam do azul celeste ao verde-mar profundo, ela carrega a serenidade dos oceanos e a leveza do horizonte. Para esta coleção, nossa equipe selecionou a dedo as pedras com maior transparência, brilho e pureza — garantindo que cada peça seja verdadeiramente única. Deixe a água-marinha conectar você à sua melhor versão e trazer equilíbrio, intuição e beleza para o seu dia a dia.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== NOVIDADES ===== -->
-    <section class="secao-produtos">
-        <div class="secao-header">
-            <h2>Novidades</h2>
-            <a href="#">Ver todas</a>
-        </div>
-        <div class="produtos-lista">
-            <div class="produto-card">
-                <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 4</span>
-                <span class="produto-preco">R$ 259,90</span>
-            </div>
-            <div class="produto-card">
-                <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 5</span>
-                <span class="produto-preco">R$ 319,90</span>
-            </div>
-            <div class="produto-card">
-                <div class="produto-imagem"></div>
-                <span class="produto-nome">Produto 6</span>
-                <span class="produto-preco">R$ 189,90</span>
-            </div>
+    <!-- ===== DESCUBRA ===== -->
+    <section class="secao-descubra">
+        <h2 class="descubra-titulo">DESCUBRA</h2>
+        <div class="descubra-botoes">
+            <a href="#" class="banner-colecoes">
+                <div class="banner-colecoes-bg"></div>
+                <div class="banner-colecoes-overlay"></div>
+                <span class="banner-colecoes-label">COLEÇÕES</span>
+            </a>
+            <a href="#" class="banner-colecoes">
+                <div class="banner-colecoes-bg banner-novidades-bg"></div>
+                <div class="banner-colecoes-overlay"></div>
+                <span class="banner-colecoes-label">NOVIDADES</span>
+            </a>
         </div>
     </section>
 
     <!-- ===== RODAPÉ ===== -->
     <footer class="rodape">
-        <p>© 2025 Quart'z – Todos os direitos reservados</p>
+        <div class="rodape-newsletter">
+            <h3 class="rodape-newsletter-titulo">NEWSLETTER</h3>
+            <p class="rodape-newsletter-desc">Receba primeiro as novidades e ofertas exclusivas.</p>
+            <div class="rodape-newsletter-form">
+                <input type="email" placeholder="Digite aqui o seu e-mail" class="rodape-input">
+                <button class="rodape-btn-enviar">Enviar</button>
+            </div>
+            <label class="rodape-checkbox">
+                <input type="checkbox">
+                <span>Li e concordo com a Política de privacidade</span>
+            </label>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">ATENDIMENTO AO CLIENTE<i class="fa-solid fa-chevron-down"></i></button>
+            <div class="rodape-accordion-content">
+                <a href="#">WhatsApp</a>
+                <a href="#">contato@quartz.com.br</a>
+                <a href="#">Política de trocas</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">SOBRE A QUART'Z<i class="fa-solid fa-chevron-down"></i></button>
+            <div class="rodape-accordion-content">
+                <a href="#">Nossa história</a>
+                <a href="#">Energia das pedras</a>
+                <a href="#">Como cuidar das joias</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-accordion">
+            <button class="rodape-accordion-btn">CONDIÇÕES LEGAIS<i class="fa-solid fa-chevron-down"></i></button>
+            <div class="rodape-accordion-content">
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de uso</a>
+            </div>
+        </div>
+
+        <hr class="rodape-divider">
+
+        <div class="rodape-bottom">
+            <div class="rodape-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="rodape-copyright">© 2025 Quart'z – Todos os direitos reservados</p>
+            <p class="rodape-cnpj">Foz do Iguaçu, PR</p>
+        </div>
     </footer>
 
-    <!-- ===== BARRA INFERIOR ===== -->
-    <nav class="bottom-nav">
-        <a href="#" class="bottom-item active">
-            <i class="fa-solid fa-house"></i>
-            <span>Início</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Buscar</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-regular fa-heart"></i>
-            <span>Favoritos</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span>Carrinho</span>
-        </a>
-        <a href="#" class="bottom-item">
-            <i class="fa-regular fa-user"></i>
-            <span>Conta</span>
-        </a>
-    </nav>
 
     <!-- ===== MENU LATERAL ===== -->
     <div id="nav-links" class="menu">
         <div class="menu-header">
-            <button class="btn-close" aria-label="Fechar menu">
-                <i class="fa-solid fa-times"></i>
-            </button>
-            <div class="menu-logo">
-                <img src="./src/imagens/logo-preta.png" alt="Logo preta Menu lateral">
-            </div>
+            <button class="btn-close" aria-label="Fechar menu"><i class="fa-solid fa-times"></i></button>
+            <div class="menu-logo"><img src="./src/imagens/logo-preta.png" alt="Logo Quart'z"></div>
             <hr class="menu-divider">
         </div>
-
         <div class="menu-auth">
             <p>Olá, faça login ou cadastre-se</p>
             <div class="menu-auth-buttons">
@@ -230,71 +368,35 @@
                 <button class="menu-btn-cadastrar">CADASTRAR</button>
             </div>
         </div>
-
-        <div class="menu-section">
-            <span class="menu-section-label">COLEÇÕES</span>
+        <div class="menu-section menu-section-principal">
             <ul>
-                <li><a href="#">Joias finas <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Semi joias de luxo <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Coleção masculina <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Diamante de laboratório <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Lançamentos <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Joias Finas <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Semi-Joias de Luxo <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Diamantes Lab. <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Coleções <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Novidades <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">Pomoções <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </div>
-
-        <hr class="menu-divider">
-
-        <div class="menu-section">
+        <div class="menu-section-descubra">
             <span class="menu-section-label">DESCUBRA</span>
             <ul>
                 <li><a href="#">Energia das pedras <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Guia de tamanhos <i class="fa-solid fa-chevron-right"></i></a></li>
                 <li><a href="#">Como cuidar das joias <i class="fa-solid fa-chevron-right"></i></a></li>
                 <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </div>
-
-        <hr class="menu-divider">
-
-        <div class="menu-section menu-atendimento">
-            <span class="menu-section-label">ATENDIMENTO</span>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        Falar no WhatsApp
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-envelope"></i>
-                        contato@sualoja.com.br
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-location-dot"></i>
-                        Foz do Iguaçu, PR
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <hr class="menu-divider">
-
         <div class="menu-footer">
             <div class="menu-social">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                 <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
             </div>
-            <p class="menu-copyright">© 2026 Quart'z Joias com Pedras naturais</p>
+            <p class="menu-copyright">© 2026 Quart'z</p>
         </div>
     </div>
 
     <div class="overlay"></div>
-
     <script src="./src/js/script.js"></script>
 </body>
 </html>
