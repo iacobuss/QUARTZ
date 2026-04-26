@@ -125,7 +125,7 @@ header.header-solido .btn-icon {
 /* ===== HERO ===== */
 .hero {
     position: relative;
-    height: 100svh;
+    height: 70svh;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -845,12 +845,13 @@ header.header-solido .btn-icon {
 }
 
 .menu-logo {
+    display: block;
     text-align: center;
-    padding: 0.5rem 0 1rem;
+    padding: 0.4rem 0 0.8rem;
 }
 
 .menu-logo img {
-    height: 48px;
+    height: 28px;
     width: auto;
     display: block;
     margin: auto;
@@ -1291,7 +1292,7 @@ header.header-solido #logo-img {
 
 /* ===== HERO — diminui para ~55vh ===== */
 .hero {
-    height: 100svh;
+    height: 70svh;
 }
 
 /* ===== HEADER — transparente só enquanto hero está visível ===== */
