@@ -769,7 +769,13 @@ header.header-solido .btn-icon {
 
 .rodape-cnpj {
     font-size: 0.65rem;
-    color: rgba(255,255,255,0.25);
+    color: rgba(255, 255, 255, 0.418);
+    text-align: center;
+}
+
+.rodape-localizacao {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.418);
     text-align: center;
 }
 
@@ -1354,8 +1360,8 @@ header.header-solido #logo-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 1.2rem;
-    font-size: 1.1rem;
+    padding: 12px 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--texto-principal);
     letter-spacing: 0.01em;
@@ -1406,8 +1412,8 @@ header.header-solido #logo-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
-    font-size: 1rem;
+    padding: 11px 0;
+    font-size: 0.9rem;
     font-weight: 400;
     color: var(--texto-principal);
     transition: color 0.2s;

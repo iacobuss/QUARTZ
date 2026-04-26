@@ -211,8 +211,8 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 1.2rem;
-    font-size: 1.1rem;
+    padding: 12px 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--texto-principal);
     letter-spacing: 0.01em;

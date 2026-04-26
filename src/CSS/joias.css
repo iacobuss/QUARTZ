@@ -319,6 +319,35 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 
 .produto-card.oculto { display: none; }
 
+/* ===== TEXTO SEO ===== */
+.seo-texto {
+    background-color: var(--bg-secao);
+    padding: 2rem 1.2rem 2.4rem;
+    border-top: 1px solid var(--borda);
+}
+
+.seo-texto h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+    margin-bottom: 1rem;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+}
+
+.seo-texto p {
+    font-size: 0.82rem;
+    color: var(--texto-principal);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 0.9rem;
+}
+
+.seo-texto p:last-child {
+    margin-bottom: 0;
+}
+
 /* ===== RODAPÉ ===== */
 .rodape { background-color: var(--preto); color: var(--branco); }
 
@@ -348,6 +377,7 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 .rodape-social { display: flex; gap: 1.4rem; }
 .rodape-social a { font-size: 1.2rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
 .rodape-social a:hover { color: var(--branco); }
-.rodape-copyright { font-size: 0.7rem; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; text-align: center; }
-.rodape-cnpj { font-size: 0.65rem; color: rgba(255,255,255,0.25); text-align: center; }
+.rodape-copyright { font-size: 0.7rem; color: rgba(255, 255, 255, 0.418); letter-spacing: 0.05em; text-align: center; }
+.rodape-cnpj { font-size: 0.65rem; color: rgba(255, 255, 255, 0.418); text-align: center; }
+.rodape-localizacao { font-size: 0.65rem; color: rgba(255, 255, 255, 0.418); text-align: center; }
 
