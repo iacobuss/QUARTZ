@@ -69,14 +69,38 @@ window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
 
 // ===== HERO CARROSSEL =====
-const heroTrack   = document.getElementById('semi-hero-track');
-const totalSlides = heroTrack ? heroTrack.children.length : 0;
-let heroAtual = 0;
-function avancarHero() {
-    heroAtual = (heroAtual + 1) % totalSlides;
-    heroTrack.style.transform = `translateX(-${heroAtual * 100}%)`;
+const heroTrack = document.getElementById('semi-hero-track');
+
+if (heroTrack) {
+    let heroAtual = 0;
+
+    const slidesOriginais = Array.from(heroTrack.children);
+    const totalOriginais = slidesOriginais.length;
+
+    // clona o primeiro slide e adiciona no final
+    const primeiroClone = slidesOriginais[0].cloneNode(true);
+    heroTrack.appendChild(primeiroClone);
+
+    const totalSlides = heroTrack.children.length;
+
+    function avancarHero() {
+        heroAtual++;
+
+        heroTrack.style.transition = 'transform 1.6s cubic-bezier(0.65, 0, 0.35, 1)';
+        heroTrack.style.transform = `translateX(-${heroAtual * 100}%)`;
+
+        // quando chega no clone, volta silenciosamente para o início
+        if (heroAtual === totalSlides - 1) {
+            setTimeout(() => {
+                heroTrack.style.transition = 'none';
+                heroAtual = 0;
+                heroTrack.style.transform = `translateX(0%)`;
+            }, 1900);
+        }
+    }
+
+    setInterval(avancarHero, 5500);
 }
-if (totalSlides > 1) setInterval(avancarHero, 4000);
 
 // ===== DROPDOWN ORDENAR POR =====
 const btnOrdenar      = document.getElementById('btn-ordenar');

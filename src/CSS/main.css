@@ -125,7 +125,7 @@ header.header-solido .btn-icon {
 /* ===== HERO ===== */
 .hero {
     position: relative;
-    height: 75svh;
+    height: 100svh;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -769,13 +769,7 @@ header.header-solido .btn-icon {
 
 .rodape-cnpj {
     font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.418);
-    text-align: center;
-}
-
-.rodape-localizacao {
-    font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.418);
+    color: rgba(255,255,255,0.25);
     text-align: center;
 }
 
@@ -959,37 +953,7 @@ header.header-solido .btn-icon {
     color: var(--texto-muted);
 }
 
-.menu-footer {
-    margin-top: auto;
-    padding: 1rem 1.2rem;
-    text-align: center;
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--borda);
-    flex-shrink: 0;
-}
-
-.menu-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.4rem;
-    margin-bottom: 0.6rem;
-}
-
-.menu-social a {
-    font-size: 1.1rem;
-    color: var(--texto-secundario);
-    transition: color 0.2s;
-}
-
-.menu-social a:hover {
-    color: var(--preto);
-}
-
-.menu-copyright {
-    font-size: 0.65rem;
-    color: var(--texto-muted);
-    letter-spacing: 0.05em;
-}
+.menu-footer { display: none; }
 
 /* ===================================================
    ALTERAÇÕES E NOVAS SEÇÕES
@@ -1327,7 +1291,7 @@ header.header-solido #logo-img {
 
 /* ===== HERO — diminui para ~55vh ===== */
 .hero {
-    height: 75svh;
+    height: 100svh;
 }
 
 /* ===== HEADER — transparente só enquanto hero está visível ===== */
@@ -1360,8 +1324,8 @@ header.header-solido #logo-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 1.2rem;
-    font-size: 1rem;
+    padding: 14px 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: var(--texto-principal);
     letter-spacing: 0.01em;
@@ -1412,8 +1376,8 @@ header.header-solido #logo-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0;
-    font-size: 0.9rem;
+    padding: 14px 0;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--texto-principal);
     transition: color 0.2s;
