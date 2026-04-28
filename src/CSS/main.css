@@ -134,11 +134,11 @@ header.header-solido .btn-icon {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('../imagens/placeholder-home.png');
-    background-size: cover;
-    background-position: center center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
-
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -155,38 +155,31 @@ header.header-solido .btn-icon {
     z-index: 1;
     padding: 0 1.4rem 2.4rem;
     width: 100%;
-}
-
-.hero-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.65);
-    font-weight: 400;
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
+    text-align: center;
 }
 
 .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     font-weight: 400;
     line-height: 1.15;
     color: var(--branco);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
 }
 
 .hero-desc {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: rgba(255,255,255,0.75);
     line-height: 1.6;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.4rem;
     max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn-primary {
@@ -202,25 +195,7 @@ header.header-solido .btn-icon {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     border: 1px solid var(--branco);
-    flex: 1;
-    min-width: 130px;
-}
-
-.btn-outline {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 20px;
-    background-color: transparent;
-    color: var(--branco);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    border: 1px solid rgba(255,255,255,0.5);
-    flex: 1;
-    min-width: 130px;
+    min-width: 160px;
 }
 
 /* ===== CARROSSEL DE CONFIANÇA ===== */
