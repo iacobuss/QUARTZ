@@ -114,13 +114,15 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     flex-direction: column;
     transition: left 0.3s ease;
     z-index: 1050;
-    /* sem overflow-y — menu não scrolla */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .menu::-webkit-scrollbar { display: none; }
 .menu.show { left: 0; }
 
 .menu-header {
-    padding: 0.8rem 1.2rem 0;
+    padding: 0.8rem 1.2rem 0.4rem;
     flex-shrink: 0;
 }
 
@@ -130,70 +132,31 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     padding: 4px;
     display: block;
     margin-left: auto;
-    margin-bottom: 0.5rem;
 }
 
-.menu-logo {
+/* espaçador empurra descubra para o fundo */
+.menu-spacer { flex: 1; }
+
+/* logo pequena acima do descubra */
+.menu-logo-bottom {
     display: block;
     text-align: center;
-    padding: 0.4rem 0 0.8rem;
+    padding: 1rem 0 0.8rem;
 }
 
-.menu-logo img {
-    height: 28px;
+.menu-logo-bottom img {
+    height: 20px;
     width: auto;
     display: block;
     margin: auto;
+    opacity: 0.6;
 }
 
-.menu-divider {
-    border: none;
-    border-top: 1px solid var(--borda);
-    margin: 0;
-}
+/* item Conta */
+.menu-item-conta { color: var(--texto-secundario) !important; }
+.menu-item-conta i.fa-user { font-size: 0.85rem; margin-right: 4px; }
 
-/* auth */
-.menu-auth {
-    padding: 0.8rem 1.2rem;
-    background-color: rgba(237,233,227,0.45);
-    flex-shrink: 0;
-}
-
-.menu-auth p {
-    font-size: 0.78rem;
-    color: var(--texto-secundario);
-    margin-bottom: 0.6rem;
-}
-
-.menu-auth-buttons { display: flex; gap: 0.5rem; }
-
-.menu-btn-entrar {
-    flex: 1;
-    padding: 10px 0;
-    border: 1px solid var(--destaque);
-    color: var(--destaque);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    background: transparent;
-    cursor: pointer;
-}
-
-.menu-btn-cadastrar {
-    flex: 1;
-    padding: 10px 0;
-    background-color: var(--preto);
-    color: var(--branco);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    border: none;
-    cursor: pointer;
-}
-
-/* seção principal — itens grandes */
+/* seção principal */
 .menu-section-principal {
     padding: 0;
     background-color: var(--branco);
@@ -202,9 +165,7 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 
 .menu-section-principal ul { list-style: none; }
 
-.menu-section-principal ul li {
-    border-bottom: 1px solid var(--borda);
-}
+.menu-section-principal ul li { border-bottom: 1px solid var(--borda); }
 
 .menu-section-principal ul li a {
     display: flex;
@@ -221,34 +182,22 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
 .menu-section-principal ul li a:hover { color: var(--destaque-escuro); }
 
 .menu-section-principal ul li a i.fa-chevron-right {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     color: var(--texto-muted);
 }
 
-/* seção descubra — empurrada para o rodapé */
+/* seção descubra */
 .menu-section-descubra {
-    margin-top: auto;
-    padding: 0.8rem 1.2rem;
+    flex-shrink: 0;
     background-color: var(--branco);
     border-top: 1px solid var(--borda);
-    flex-shrink: 0;
 }
 
-.menu-section-descubra .menu-section-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-    color: var(--texto-secundario);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.4rem;
-    text-transform: uppercase;
-}
+.menu-section-descubra .menu-section-label { display: none; }
 
 .menu-section-descubra ul { list-style: none; }
 
-.menu-section-descubra ul li {
-    border-bottom: 1px solid var(--borda);
-}
+.menu-section-descubra ul li { border-bottom: 1px solid var(--borda); }
 
 .menu-section-descubra ul li:last-child { border-bottom: none; }
 
@@ -256,10 +205,10 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0;
-    font-size: 0.9rem;
+    padding: 11px 1.2rem;
+    font-size: 0.85rem;
     font-weight: 300;
-    color: var(--texto-principal);
+    color: var(--texto-secundario);
     transition: color 0.2s;
 }
 
@@ -270,5 +219,6 @@ header.header-solido .btn-icon { color: var(--texto-principal); }
     color: var(--texto-muted);
 }
 
-/* rodapé do menu */
+/* rodapé do menu — oculto */
 .menu-footer { display: none; }
+.menu-divider { border: none; border-top: 1px solid var(--borda); margin: 0; }

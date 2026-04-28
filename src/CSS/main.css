@@ -300,18 +300,18 @@ header.header-solido .btn-icon {
     transition: background-color 0.2s;
     overflow: hidden;
     height: 100%;
+    position: relative;
 }
 
-.categoria-card:active {
-    background-color: var(--bg-card);
-}
+.categoria-card:active { background-color: var(--bg-card); }
 
 .categoria-foto {
     width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
     aspect-ratio: 1;
-    background-color: #f5f2ed;;
+    background-color: #f5f2ed;
     overflow: hidden;
+    position: relative;
 }
 
 .categoria-foto img {
@@ -322,16 +322,32 @@ header.header-solido .btn-icon {
     transition: transform 0.4s ease;
 }
 
-.categoria-card:hover .categoria-foto img {
-    transform: scale(1.04);
+.categoria-card:hover .categoria-foto img { transform: scale(1.04); }
+
+.categoria-foto::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    transition: background 0.3s;
 }
 
+.categoria-card:hover .categoria-foto::after { background: rgba(0,0,0,0.45); }
+
 .categoria-nome {
-    font-size: 0.85rem;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
     font-weight: 400;
-    color: var(--texto-principal);
-    padding: 0.7rem 0.8rem 0.9rem;
-    letter-spacing: 0.02em;
+    color: var(--branco);
+    letter-spacing: 0.08em;
+    z-index: 1;
+    pointer-events: none;
+    text-align: center;
 }
 
 /* ===== SEÇÃO PROMOÇÕES — base (sobrescrita pela versão final abaixo) ===== */
@@ -373,7 +389,7 @@ header.header-solido .btn-icon {
 }
 
 .promo-preco {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Jost, sans-serif';
     font-size: 1.4rem;
     color: var(--texto-principal);
     font-weight: 400;
@@ -853,182 +869,11 @@ header.header-solido .btn-icon {
     color: var(--preto);
 }
 
-/* ===== MENU LATERAL ===== */
-.menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 78%;
-    max-width: 320px;
-    height: 100vh;
-    height: 100svh;
-    background-color: var(--branco);
-    border-right: 1px solid var(--borda);
-    display: flex;
-    flex-direction: column;
-    /* sem overflow-y: auto — não scrolla mais */
-    transition: left 0.3s ease;
-    z-index: 1050;
-}
+/* ===== MENU LATERAL — estilos em global.css ===== */
 
-.menu.show {
-    left: 0;
-}
-
-.menu-header {
-    padding: 0.8rem 1.2rem 0;
-    flex-shrink: 0;
-}
-
-.btn-close {
-    font-size: 1.1rem;
-    color: var(--texto-secundario);
-    padding: 4px;
-    display: block;
-    margin-left: auto;
-    margin-bottom: 0.5rem;
-}
-
-.menu-logo {
-    text-align: center;
-    padding: 0.5rem 0 1rem;
-}
-
-.menu-logo img {
-    height: 48px;
-    width: auto;
-    display: block;
-    margin: auto;
-}
-
-.menu-divider {
-    border: none;
-    border-top: 1px solid var(--borda);
-    margin: 0;
-}
-
-.menu-auth {
-    padding: 0.9rem 1.2rem;
-    background-color: rgba(237, 233, 227, 0.45);
-    flex-shrink: 0;
-}
-
-.menu-auth p {
-    font-size: 0.8rem;
-    color: var(--texto-secundario);
-    margin-bottom: 0.7rem;
-}
-
-.menu-auth-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.menu-btn-entrar {
-    flex: 1;
-    padding: 11px 0;
-    border: 1px solid var(--destaque);
-    color: var(--destaque);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    background: transparent;
-    cursor: pointer;
-}
-
-.menu-btn-cadastrar {
-    flex: 1;
-    padding: 11px 0;
-    background-color: var(--preto);
-    color: var(--branco);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    border: none;
-    cursor: pointer;
-}
-
-.menu-section {
-    padding: 0.8rem 1.2rem;
-    background-color: var(--branco);
-    flex-shrink: 0;
-}
-
-.menu-section-label {
-    font-size: 0.58rem;
-    letter-spacing: 0.2em;
-    color: var(--texto-muted);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-}
-
-.menu-section ul {
-    list-style: none;
-}
-
-.menu-section ul li {
-    border-bottom: 1px solid var(--borda);
-}
-
-.menu-section ul li:last-child {
-    border-bottom: none;
-}
-
-.menu-section ul li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 11px 0;
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: var(--texto-principal);
-    transition: color 0.2s;
-}
-
-.menu-section ul li a:hover {
-    color: var(--destaque-escuro);
-}
-
-.menu-section ul li a i.fa-chevron-right {
-    font-size: 0.6rem;
-    color: var(--texto-muted);
-}
-
-.menu-footer {
-    margin-top: auto;
-    padding: 1rem 1.2rem;
-    text-align: center;
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--borda);
-    flex-shrink: 0;
-}
-
-.menu-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.4rem;
-    margin-bottom: 0.6rem;
-}
-
-.menu-social a {
-    font-size: 1.1rem;
-    color: var(--texto-secundario);
-    transition: color 0.2s;
-}
-
-.menu-social a:hover {
-    color: var(--preto);
-}
-
-.menu-copyright {
-    font-size: 0.65rem;
-    color: var(--texto-muted);
-    letter-spacing: 0.05em;
-}
+/* ===================================================
+   ALTERAÇÕES E NOVAS SEÇÕES
+   =================================================== */
 
 /* ===================================================
    ALTERAÇÕES E NOVAS SEÇÕES
@@ -1082,12 +927,12 @@ header.header-solido #logo-img {
 
 .secao-titulo-promo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: var(--preto);
     text-align: center;
     letter-spacing: 0.04em;
-    padding: 2.4rem 1rem 0.4rem;
+    padding: 1.8rem 1rem 0.3rem;
 }
 
 .secao-subtitulo-promo {
@@ -1187,23 +1032,23 @@ header.header-solido #logo-img {
 
 .secao-titulo-colecoes {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: var(--preto);
     text-align: center;
     letter-spacing: 0.04em;
-    padding: 2.4rem 1rem 0.4rem;
+    padding: 1.8rem 1rem 0.3rem;
 }
 
 .colecao-bloco {
-    padding-bottom: 2rem;
+    padding-bottom: 1.4rem;
     background-color: var(--bg-principal);
 }
 
 .colecao-bloco-alt {
     background-color: var(--bg-secao);
     border-top: 1px solid var(--borda);
-    padding-top: 2rem;
+    padding-top: 1.4rem;
 }
 
 /* wrapper carrossel com setas */
@@ -1303,9 +1148,9 @@ header.header-solido #logo-img {
 }
 
 .colecao-desc-texto {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: var(--texto-secundario);
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
 /* ===== DESCUBRA ===== */
@@ -1356,101 +1201,28 @@ header.header-solido #logo-img {
 /* ===== HEADER — transparente só enquanto hero está visível ===== */
 /* (lógica agora é baseada na altura do hero via JS — sem mudança de CSS aqui) */
 
-/* ===== CATEGORIAS — nome centralizado ===== */
-.categoria-nome {
+/* ===== BOTÃO DE COLEÇÃO ===== */
+.colecao-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 11px 0;
+    width: 100%;
     text-align: center;
-    justify-content: center;
-}
-
-/* ===== MENU LATERAL — refatorado ===== */
-
-/* seção principal sem label, itens maiores e mais espaçados */
-.menu-section-principal {
-    padding: 0;
-    background-color: var(--branco);
-    flex-shrink: 0;
-}
-
-.menu-section-principal ul {
-    list-style: none;
-}
-
-.menu-section-principal ul li {
-    border-bottom: 1px solid var(--borda);
-}
-
-.menu-section-principal ul li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 1.2rem;
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: var(--texto-principal);
-    letter-spacing: 0.01em;
-    transition: color 0.2s;
-}
-
-.menu-section-principal ul li a:hover {
-    color: var(--destaque-escuro);
-}
-
-.menu-section-principal ul li a i.fa-chevron-right {
-    font-size: 0.65rem;
-    color: var(--texto-muted);
-}
-
-/* seção DESCUBRA — empurrada pro rodapé, label visível, texto mais escuro */
-.menu-section-descubra {
-    margin-top: auto;
-    padding: 1rem 1.2rem 0.8rem;
-    background-color: var(--branco);
-    border-top: 1px solid var(--borda);
-    flex-shrink: 0;
-}
-
-.menu-section-descubra .menu-section-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.22em;
-    color: var(--texto-secundario);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.3rem;
-    text-transform: uppercase;
-}
-
-.menu-section-descubra ul {
-    list-style: none;
-}
-
-.menu-section-descubra ul li {
-    border-bottom: 1px solid var(--borda);
-}
-
-.menu-section-descubra ul li:last-child {
-    border-bottom: none;
-}
-
-.menu-section-descubra ul li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 0;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--texto-principal);
-    transition: color 0.2s;
-}
-
-.menu-section-descubra ul li a:hover {
+    border: 1px solid var(--preto);
     color: var(--preto);
+    background: transparent;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.menu-section-descubra ul li a i.fa-chevron-right {
-    font-size: 0.6rem;
-    color: var(--texto-muted);
+.colecao-btn:hover {
+    background-color: var(--preto);
+    color: var(--branco);
 }
-
 
 /* ===== PEÇA EM DESTAQUE ===== */
 .secao-destaque {
@@ -1526,7 +1298,7 @@ header.header-solido #logo-img {
 }
 
 .destaque-preco {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Jost', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--texto-principal);
