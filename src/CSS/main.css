@@ -19,6 +19,17 @@ body {
     padding-bottom: 64px;
 }
 
+.colecao-prod-nome,
+.colecao-prod-preco,
+.colecao-prod-parcela,
+.destaque-nome,
+.destaque-preco,
+.destaque-parcela {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -138,6 +149,7 @@ header.header-solido .btn-icon {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    z-index: 0;
 }
 .hero-overlay {
     position: absolute;
@@ -1275,7 +1287,6 @@ header.header-solido #logo-img {
 .destaque-preco {
     font-family: 'Jost', sans-serif;
     font-size: 1.6rem;
-    font-weight: 400;
     color: var(--texto-principal);
 }
 

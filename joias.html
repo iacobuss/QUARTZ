@@ -34,7 +34,7 @@
         </nav>
     </header>
 
-    <!-- ===== HERO — carrossel decorativo automático ===== -->
+    <!-- ===== HERO ===== -->
     <section class="joias-hero">
         <div class="joias-hero-titulo">
             <h1>JOIAS COM PEDRAS NATURAIS</h1>
@@ -57,26 +57,31 @@
 
     <!-- ===== FILTROS ===== -->
     <div class="filtros-wrapper">
-        <!-- linha 1: abas centralizadas -->
-        <div class="selecao">
-            <button class="btn-aba active" data-filtro="todos">TODOS</button>
-            <button class="btn-aba" data-filtro="ouro">OURO 18K</button>
-            <button class="btn-aba" data-filtro="prata">PRATA</button>
-        </div>
-        <!-- linha 2: só ordenar por -->
         <div class="filtros-bar">
+            <!-- ORDENAR POR — esquerda -->
             <div class="ordenar-wrapper">
                 <button class="btn-ordenar" id="btn-ordenar">
                     ORDENAR POR
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="ordenar-dropdown" id="ordenar-dropdown">
-                    <button class="ordenar-opcao" data-ordem="maior-preco">Maior preço</button>
-                    <button class="ordenar-opcao" data-ordem="menor-preco">Menor preço</button>
-                    <button class="ordenar-opcao" data-ordem="pingentes">Pingentes</button>
-                    <button class="ordenar-opcao" data-ordem="brincos">Brincos</button>
                     <button class="ordenar-opcao" data-ordem="aneis">Anéis</button>
+                    <button class="ordenar-opcao" data-ordem="brincos">Brincos</button>
+                    <button class="ordenar-opcao" data-ordem="pingentes">Pingentes</button>
                     <button class="ordenar-opcao" data-ordem="pulseiras">Pulseiras</button>
+                    <button class="ordenar-opcao" data-ordem="correntes">Correntes</button>
+                </div>
+            </div>
+            <!-- FILTRO — direita -->
+            <div class="ordenar-wrapper">
+                <button class="btn-filtro" id="btn-filtro">
+                    FILTRO
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="filtro-dropdown" id="filtro-dropdown">
+                    <button class="filtro-opcao" data-filtro="maior-preco">Maior preço</button>
+                    <button class="filtro-opcao" data-filtro="menor-preco">Menor preço</button>
+                    <button class="filtro-opcao" data-filtro="novo">Novo</button>
                 </div>
             </div>
         </div>
@@ -169,117 +174,26 @@
     <!-- ===== TEXTO SEO ===== -->
     <section class="seo-texto">
         <h2>Joias em Ouro e Prata com Pedras Naturais</h2>
-        <p>Descubra o poder de uma joia que vai além da estética. Nossa coleção de joias em ouro e prata com pedras naturais foi criada para quem valoriza exclusividade, elegância e significado em cada detalhe. Cada peça é cuidadosamente selecionada para realçar sua beleza única, elevando seu estilo com sofisticação e autenticidade.</p>
-        <p>As pedras naturais carregam história, energia e personalidade — e, combinadas com o brilho clássico do ouro e da prata, transformam-se em verdadeiros destaques no seu visual. Seja para um momento especial ou para o dia a dia, nossas joias são feitas para marcar presença e despertar olhares.</p>
-        <p>Aqui, você encontra peças que unem design refinado, qualidade premium e um acabamento impecável, garantindo durabilidade e brilho por muito mais tempo. São joias pensadas para valorizar você, aumentar sua confiança e complementar qualquer look com elegância.</p>
-        <p>Aproveite agora para escolher a peça perfeita e leve mais do que um acessório — leve uma experiência. Estoques limitados e modelos exclusivos tornam cada escolha ainda mais especial. Não perca a oportunidade de destacar sua essência com joias que realmente fazem a diferença.</p>
+        <p>Descubra o poder de uma joia que vai além da estética. Nossa coleção de joias em ouro e prata com pedras naturais foi criada para quem valoriza exclusividade, elegância e significado em cada detalhe.</p>
+        <p>As pedras naturais carregam história, energia e personalidade — e, combinadas com o brilho clássico do ouro e da prata, transformam-se em verdadeiros destaques no seu visual.</p>
+        <p>Aqui, você encontra peças que unem design refinado, qualidade premium e um acabamento impecável, garantindo durabilidade e brilho por muito mais tempo.</p>
+        <p>Aproveite agora para escolher a peça perfeita e leve mais do que um acessório — leve uma experiência.</p>
     </section>
 
-    <!-- ===== RODAPÉ ===== -->
-    <footer class="rodape">
-        <div class="rodape-newsletter">
-            <h3 class="rodape-newsletter-titulo">Newsletter</h3>
-            <p class="rodape-newsletter-desc">Receba primeiro as novidades e ofertas exclusivas.</p>
-            <div class="rodape-newsletter-form">
-                <input type="email" placeholder="Digite aqui o seu e-mail" class="rodape-input">
-                <button class="rodape-btn-enviar">Enviar</button>
-            </div>
-            <label class="rodape-checkbox">
-                <input type="checkbox">
-                <span>Li e concordo com a Política de privacidade</span>
-            </label>
+    <!-- ===== VISTOS RECENTEMENTE ===== -->
+    <section class="vistos-recentemente">
+        <h3 class="vistos-titulo">Vistos Recentemente</h3>
+        <div class="vistos-grid" id="vistos-grid">
+            <p class="vistos-vazio">Você ainda não visitou nenhum produto.</p>
         </div>
+    </section>
 
-        <hr class="rodape-divider">
-
-        <div class="rodape-accordion">
-            <button class="rodape-accordion-btn">
-                ATENDIMENTO AO CLIENTE
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="rodape-accordion-content">
-                <a href="#">WhatsApp</a>
-                <a href="#">contato@quartz.com.br</a>
-                <a href="#">Política de trocas</a>
-            </div>
-        </div>
-
-        <hr class="rodape-divider">
-
-        <div class="rodape-accordion">
-            <button class="rodape-accordion-btn">
-                SOBRE A QUART'Z
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="rodape-accordion-content">
-                <a href="#">Nossa história</a>
-                <a href="#">Energia das pedras</a>
-                <a href="#">Como cuidar das joias</a>
-            </div>
-        </div>
-
-        <hr class="rodape-divider">
-
-        <div class="rodape-accordion">
-            <button class="rodape-accordion-btn">
-                CONDIÇÕES LEGAIS
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="rodape-accordion-content">
-                <a href="#">Política de privacidade</a>
-                <a href="#">Termos de uso</a>
-            </div>
-        </div>
-
-        <hr class="rodape-divider">
-
-        <div class="rodape-bottom">
-            <div class="rodape-social">
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-            </div>
-            <p class="rodape-copyright">© 2026 Quart'z – Todos os direitos reservados</p>
-            <p class="rodape-cnpj">CNPJ 37.643.147/0001-00</p>
-            <p class="rodape-localizacao">Av. das Cataratas, 3570 - Vila Yolanda, Foz do Iguaçu - PR, 85853-000</p>
-        </div>
-    </footer>
-
-    <!-- ===== MENU LATERAL ===== -->
-    <div id="nav-links" class="menu">
-
-        <div class="menu-header">
-            <button class="btn-close" aria-label="Fechar menu"><i class="fa-solid fa-times"></i></button>
-        </div>
-
-        <div class="menu-section menu-section-principal">
-            <ul>
-                <li><a href="joias.html">Joias Finas <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="semi.html">Semi-Joias de Luxo <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Diamantes Lab. <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Coleções <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Novidades <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Promoções <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#" class="menu-item-conta"><i class="fa-regular fa-user"></i> Conta <i class="fa-solid fa-chevron-right"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="menu-spacer"></div>
-
-        <div class="menu-section-descubra">
-            <div class="menu-logo-bottom">
-                <img src="./src/imagens/logo-preta.png" alt="Quart'z">
-            </div>
-            <ul>
-                <li><a href="#">Energia das pedras <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Como cuidar das joias <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#">Nossa história <i class="fa-solid fa-chevron-right"></i></a></li>
-            </ul>
-        </div>
-
-    </div>
-
+    <!-- ===== COMPONENTES GLOBAIS ===== -->
+    <div id="site-menu"></div>
+    <div id="site-rodape"></div>
     <div class="overlay"></div>
+
+    <script src="./src/js/components.js"></script>
     <script src="./src/js/joias.js"></script>
 </body>
 </html>

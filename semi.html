@@ -55,28 +55,33 @@
         </div>
     </section>
 
-    <!-- ===== SLOGAN ===== -->
-    <div class="semi-slogan">
-        <p>Sua versão mais elegante começa aqui — descubra seu brilho.</p>
-    </div>
-
     <!-- ===== FILTROS ===== -->
     <div class="filtros-wrapper">
         <div class="filtros-bar">
+            <!-- ORDENAR POR — esquerda -->
             <div class="ordenar-wrapper">
                 <button class="btn-ordenar" id="btn-ordenar">
                     ORDENAR POR
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="ordenar-dropdown" id="ordenar-dropdown">
-                    <button class="ordenar-opcao" data-ordem="maior-preco">Maior preço</button>
-                    <button class="ordenar-opcao" data-ordem="menor-preco">Menor preço</button>
-                    <button class="ordenar-opcao" data-ordem="banho-ouro">Banho de ouro</button>
-                    <button class="ordenar-opcao" data-ordem="banho-prata">Banho de prata</button>
-                    <button class="ordenar-opcao" data-ordem="pingentes">Pingentes</button>
-                    <button class="ordenar-opcao" data-ordem="brincos">Brincos</button>
                     <button class="ordenar-opcao" data-ordem="aneis">Anéis</button>
+                    <button class="ordenar-opcao" data-ordem="brincos">Brincos</button>
+                    <button class="ordenar-opcao" data-ordem="pingentes">Pingentes</button>
                     <button class="ordenar-opcao" data-ordem="pulseiras">Pulseiras</button>
+                    <button class="ordenar-opcao" data-ordem="correntes">Correntes</button>
+                </div>
+            </div>
+            <!-- FILTRO — direita -->
+            <div class="ordenar-wrapper">
+                <button class="btn-filtro" id="btn-filtro">
+                    FILTRO
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="filtro-dropdown" id="filtro-dropdown">
+                    <button class="filtro-opcao" data-filtro="maior-preco">Maior preço</button>
+                    <button class="filtro-opcao" data-filtro="menor-preco">Menor preço</button>
+                    <button class="filtro-opcao" data-filtro="novo">Novo</button>
                 </div>
             </div>
         </div>
@@ -255,22 +260,16 @@
         <p>Escolha agora suas favoritas e transforme qualquer look em algo memorável. Nossas coleções são limitadas, o que torna cada peça ainda mais especial. Garanta já a sua e descubra como uma semi-joia de luxo pode fazer toda a diferença no seu estilo.</p>
     </section>
 
+    <!-- ===== VISTOS RECENTEMENTE ===== -->
+    <section class="vistos-recentemente">
+        <h3 class="vistos-titulo">Vistos Recentemente</h3>
+        <div class="vistos-grid" id="vistos-grid">
+            <p class="vistos-vazio">Você ainda não visitou nenhum produto.</p>
+        </div>
+    </section>
+
     <!-- ===== RODAPÉ ===== -->
     <footer class="rodape">
-        <div class="rodape-newsletter">
-            <h3 class="rodape-newsletter-titulo">Newsletter</h3>
-            <p class="rodape-newsletter-desc">Receba primeiro as novidades e ofertas exclusivas.</p>
-            <div class="rodape-newsletter-form">
-                <input type="email" placeholder="Digite aqui o seu e-mail" class="rodape-input">
-                <button class="rodape-btn-enviar">Enviar</button>
-            </div>
-            <label class="rodape-checkbox">
-                <input type="checkbox">
-                <span>Li e concordo com a Política de privacidade</span>
-            </label>
-        </div>
-
-        <hr class="rodape-divider">
 
         <div class="rodape-accordion">
             <button class="rodape-accordion-btn">
